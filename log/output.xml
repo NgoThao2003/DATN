@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-03-23T15:15:23.201818" rpa="false" schemaversion="5">
+<suite id="s1" name="SignUp" source="D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\SignUp.robot">
+<test id="s1-t1" name="Login Success when valid fields are entered" line="5">
+<kw name="Open Browser And Login" owner="SignIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-23T15:15:24.507624" level="INFO">Opening browser 'chrome' to base url 'https://hauifood.com/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-23T15:15:24.507624" elapsed="2.778136"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-23T15:15:27.285760" elapsed="0.605648"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-23T15:15:27.893406" level="INFO">Executing JavaScript:
+document.body.style.zoom = '0.9';
+Without any arguments.</msg>
+<arg>document.body.style.zoom = '0.9';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-23T15:15:27.892406" elapsed="0.008002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Email_Locator}</arg>
+<arg>60s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-23T15:15:27.900408" elapsed="0.242055"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-23T15:15:28.143463" level="INFO">Typing text 'thanhthaongo845@gmail.com' into text field '//input[@type='email']'.</msg>
+<arg>${Email_Locator}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-23T15:15:28.142463" elapsed="0.223048"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-23T15:15:28.366511" level="INFO">Typing text 'thao2702@' into text field '//input[@type='password']'.</msg>
+<arg>${Password_Locator}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-23T15:15:28.365511" elapsed="0.229563"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-23T15:15:28.596072" level="INFO">Clicking button '(//button//p[contains(text(), 'Sign in')])[1]'.</msg>
+<msg time="2025-03-23T15:15:28.858130" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-23T15:15:28.859132" level="FAIL">Button with locator '(//button//p[contains(text(), 'Sign in')])[1]' not found.</msg>
+<arg>${Button_SignUp}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-03-23T15:15:28.596072" elapsed="0.266057">Button with locator '(//button//p[contains(text(), 'Sign in')])[1]' not found.</status>
+</kw>
+<arg>thanhthaongo845@gmail.com</arg>
+<arg>thao2702@</arg>
+<doc>Login with valid information</doc>
+<status status="FAIL" start="2025-03-23T15:15:24.504625" elapsed="4.358504">Button with locator '(//button//p[contains(text(), 'Sign in')])[1]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-03-23T15:15:24.503624" elapsed="4.359505">Button with locator '(//button//p[contains(text(), 'Sign in')])[1]' not found.</status>
+</test>
+<status status="FAIL" start="2025-03-23T15:15:23.446388" elapsed="5.417743"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="SignUp">SignUp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
+ator}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-23T15:15:28.622078" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${Button_SignUp}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-23T15:15:28.622078" elapsed="0.000000"/>
+</kw>
+<arg>thanhthaongo845@gmail.com</arg>
+<arg>thao2702@</arg>
+<doc>Login with valid information</doc>
+<status status="FAIL" start="2025-03-23T15:15:21.060336" elapsed="7.562741">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B1BD4C25+3179557]
+	(No symbol) [0x00007FF7B18388A0]
+	(No symbol) [0x00007FF7B16C91CA]
+	(No symbol) [0x00007FF7B1705CE8]
+	(No symbol) [0x00007FF7B1701CCD]
+	(No symbol) [0x00007FF7B1755E8B]
+	(No symbol) [0x00007FF7B1755460]
+	(No symbol) [0x00007FF7B1747A03]
+	(No symbol) [0x00007FF7B17106D0]
+	(No symbol) [0x00007FF7B1711983]
+	GetHandleVerifier [0x00007FF7B1C367CD+3579853]
+	GetHandleVerifier [0x00007FF7B1C4D1D2+3672530]
+	GetHandleVerifier [0x00007FF7B1C42153+3627347]
+	GetHandleVerifier [0x00007FF7B19A092A+868650]
+	(No symbol) [0x00007FF7B1842FFF]
+	(No symbol) [0x00007FF7B183F4A4]
+	(No symbol) [0x00007FF7B183F646]
+	(No symbol) [0x00007FF7B182EAA9]
+	BaseThreadInitThunk [0x00007FFA09377374+20]
+	RtlUserThreadStart [0x00007FFA09E5CC91+33]
+</status>
+</kw>
+<status status="FAIL" start="2025-03-23T15:15:21.059336" elapsed="7.563741">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+	GetHandleVerifier [0x00007FF7B1BD4C25+3179557]
+	(No symbol) [0x00007FF7B18388A0]
+	(No symbol) [0x00007FF7B16C91CA]
+	(No symbol) [0x00007FF7B1705CE8]
+	(No symbol) [0x00007FF7B1701CCD]
+	(No symbol) [0x00007FF7B1755E8B]
+	(No symbol) [0x00007FF7B1755460]
+	(No symbol) [0x00007FF7B1747A03]
+	(No symbol) [0x00007FF7B17106D0]
+	(No symbol) [0x00007FF7B1711983]
+	GetHandleVerifier [0x00007FF7B1C367CD+3579853]
+	GetHandleVerifier [0x00007FF7B1C4D1D2+3672530]
+	GetHandleVerifier [0x00007FF7B1C42153+3627347]
+	GetHandleVerifier [0x00007FF7B19A092A+868650]
+	(No symbol) [0x00007FF7B1842FFF]
+	(No symbol) [0x00007FF7B183F4A4]
+	(No symbol) [0x00007FF7B183F646]
+	(No symbol) [0x00007FF7B182EAA9]
+	BaseThreadInitThunk [0x00007FFA09377374+20]
+	RtlUserThreadStart [0x00007FFA09E5CC91+33]
+</status>
+</test>
+<status status="FAIL" start="2025-03-23T15:15:20.662246" elapsed="7.961831"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="SignUp">SignUp</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
