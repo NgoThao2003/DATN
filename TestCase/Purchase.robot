@@ -117,15 +117,8 @@ Purchase failed without selecting a floor
     wait until element is visible    ${Building_A7}    ${TimeOut}
     click element    ${Building_A7}
     scroll element into view    ${Note}
-    input text    ${Note}    0359234732
+    input text    ${Note}    03592347
     wait until element is visible    ${Button_Pay_Disable}    ${TimeOut}
     scroll element into view    ${Button_Pay_Disable}
     click element    ${Logo}
     sleep    2s
-
-
-
-
-
-
-
