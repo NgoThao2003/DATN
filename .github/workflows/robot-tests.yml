@@ -28,7 +28,7 @@ jobs:
           robot --output output.xml --report report.html --log log.html TestCase/
 
       - name: Upload Robot Framework Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: robot-report
           path: |
