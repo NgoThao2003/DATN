@@ -1,6 +1,6 @@
 *** Settings ***
 Resource   Library.resource
-
+Resource    Utils.resource
 *** Variables ***
 ${BROWSER}   chrome
 ${URL}  https://hauifood.vn/auth/login
@@ -20,5 +20,6 @@ Login Web Haui Food
     click button    ${Button_SignIn}
 
 Open Browwer And Login
-   Open Browser   ${URL}    ${BROWSER}
+#   Open Browser   ${URL}    ${BROWSER}
+   Open Browser Headless Chrome
    Login Web Haui Food    thaontt@gmail.com    thao2702@

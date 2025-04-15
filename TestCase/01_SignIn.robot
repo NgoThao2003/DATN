@@ -1,10 +1,9 @@
 *** Settings ***
 Resource    ../Resource/SignIn.resource
 Resource    ../Resource/Library.resource
-Library    SeleniumLibrary
 Resource    ../Resource/Utils.resource
-
-Suite Setup    Open Browser   ${URL}     ${BROWSER}
+#Suite Setup    Open Browser   ${URL}     ${BROWSER}
+Suite Setup    Open Browser Headless Chrome
 
 *** Variables ***
 ${Message_Error_SignIn}     //div//div[contains(text(), 'Tài khoản hoặc mật khẩu không chính xác')]

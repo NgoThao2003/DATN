@@ -2,8 +2,9 @@
 Resource    ../Resource/SignUp.resource
 Resource    ../Resource/Library.resource
 Resource    ../Resource/Utils.resource
-Suite Setup    Open Browser   ${URL_SignUp}     ${BROWSER}
-Library    SeleniumLibrary
+#Suite Setup    Open Browser   ${URL_SignUp}     ${BROWSER}
+Suite Setup    Open Browser Headless Chrome
+
 *** Variables ***
 ${Message_existed_Email}     //div//div[contains(text(), 'Email đã tồn tại')]
 ${Message_SignUp_Success}  //div//div[contains(text(), 'Đăng ký tài khoản thành công')]

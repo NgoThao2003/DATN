@@ -60,3 +60,12 @@ Go to Account information
     click element    ${Avt}
     wait until element is visible    ${Button_Personal_Page}    ${TimeOut}
     click element    ${Button_Personal Page}
+
+Open Browser Headless Chrome
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --disable-gpu
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --user-data-dir=/tmp/chrome-data-${random.randint(0, 100000)}
+    Open Browser    ${URL}    chrome    options=${options}

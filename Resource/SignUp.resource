@@ -1,6 +1,6 @@
 *** Settings ***
 Resource   Library.resource
-
+Resource    Utils.resource
 *** Variables ***
 ${BROWSER}   chrome
 ${URL_SignUp}  https://hauifood.vn/auth/signup
@@ -21,5 +21,6 @@ SignUp Web Haui Food
     click button    ${Button_SignUp}
 
 Open Browwer And SignUp
-   Open Browser   ${URL}    ${BROWSER}
+#   Open Browser   ${URL}    ${BROWSER}
+   Open Browser Headless Chrome
    SignUp Web Haui Food   thanhthaongo845@gmail.com    thao2702@

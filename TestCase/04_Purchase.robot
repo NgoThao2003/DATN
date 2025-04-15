@@ -5,7 +5,7 @@ Resource    ../Resource/Utils.resource
 Resource    ../Resource/Search.resource
 Resource    ../Resource/ShoppingCardManagement.resource
 Suite Setup    Open Browwer And Login
-Library    SeleniumLibrary
+
 *** Variables ***
 ${Button_Pay}    //div//button//p[contains(text(), 'Thanh toán')]
 ${Button_Pay_Disable}    //button[@class='Button_wrapper__6uHX0 Button_primary__CHwmz Button_disabled__UuTSG Button_order__Jbyhw']

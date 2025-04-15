@@ -5,7 +5,7 @@ Resource    ../Resource/Utils.resource
 Resource    ../Resource/Search.resource
 Resource    ../Resource/ShoppingCardManagement.resource
 Suite Setup    Open Browwer And Login
-Library    SeleniumLibrary
+
 *** Variables ***
 
 *** Keywords ***
