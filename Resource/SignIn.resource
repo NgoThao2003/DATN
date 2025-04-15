@@ -20,6 +20,6 @@ Login Web Haui Food
     click button    ${Button_SignIn}
 
 Open Browwer And Login
-#   Open Browser   ${URL}    ${BROWSER}
-   Open Browser Headless Chrome
-   Login Web Haui Food    thaontt@gmail.com    thao2702@
+   Open Browser   ${URL}    ${BROWSER}    options=add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
+#   Open Browser Headless Chrome
+   Login Web Haui Food    thaontt@gmail.com    Thao2702@

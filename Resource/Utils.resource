@@ -62,10 +62,12 @@ Go to Account information
     click element    ${Button_Personal Page}
 
 Open Browser Headless Chrome
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    ${options}=    Evaluate    __import__('selenium.webdriver').webdriver.ChromeOptions()
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --disable-gpu
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Call Method    ${options}    add_argument    --user-data-dir=/tmp/chrome-data-${random.randint(0, 100000)}
+    ${rand}=    Evaluate    random.randint(0, 100000)    random
+    ${user_data_dir}=    Set Variable    --user-data-dir=/tmp/chrome-data-${rand}
+    Call Method    ${options}    add_argument    ${user_data_dir}
     Open Browser    ${URL}    chrome    options=${options}

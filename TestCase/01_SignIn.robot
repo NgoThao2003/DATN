@@ -2,8 +2,8 @@
 Resource    ../Resource/SignIn.resource
 Resource    ../Resource/Library.resource
 Resource    ../Resource/Utils.resource
-#Suite Setup    Open Browser   ${URL}     ${BROWSER}
-Suite Setup    Open Browser Headless Chrome
+Suite Setup    Open Browser   ${URL}     ${BROWSER}
+
 
 *** Variables ***
 ${Message_Error_SignIn}     //div//div[contains(text(), 'Tài khoản hoặc mật khẩu không chính xác')]
@@ -55,7 +55,7 @@ Login failed when password field is left blank
 
 Login Success when valid fields are entered
     [Documentation]    Login with valid information
-    Login Web Haui Food  thaontt@gmail.com  thao2702@
+    Login Web Haui Food  thaontt@gmail.com  Thao2702@
     click button    ${Button_SignIn}
     wait until element is visible    ${Message_SignIn_Success}    3s
     sleep    5s
