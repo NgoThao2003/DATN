@@ -3,7 +3,7 @@ Resource    ../Resource/SignIn.resource
 Resource    ../Resource/Library.resource
 Resource    ../Resource/Utils.resource
 Suite Setup    Open Browwer And Login
-
+Library    SeleniumLibrary
 *** Variables ***
 
 *** Keywords ***

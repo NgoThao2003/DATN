@@ -3,7 +3,7 @@ Resource   Library.resource
 
 *** Variables ***
 ${BROWSER}   chrome
-${URL_SignUp}  https://hauifood.com/auth/signup
+${URL_SignUp}  https://hauifood.vn/auth/signup
 ${Email_Locator}    //input[@type='email']
 ${Password_Locator}    //input[@type='password']
 ${Name_Locator}    //input[@placeholder='Họ tên']

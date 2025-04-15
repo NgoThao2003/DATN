@@ -18,17 +18,6 @@ Product search successful enter approximate product name
 
 Product search fails when product does not exist
     wait until element is visible    ${Input_Search}    ${TimeOut}
-    sleep    3s
     input text    ${Input_Search}    Bánh Mỳ
-    click element    ${Button_Search}
     sleep    3s
     wait until element is visible    ${Message_error_search}    ${TimeOut}
-
-#tìm kiếm thành công theo biểu tượng tìm kiếm
-Search successful by search icon
-    wait until element is visible    ${Input_Search}    ${TimeOut}
-    sleep    3s
-    input text    ${Input_Search}    Bánh Mì
-    click element    ${Icon_search}
-    sleep    3s
-

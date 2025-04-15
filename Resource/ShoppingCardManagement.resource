@@ -10,7 +10,7 @@ ${Button_Search}    //button[contains(text(), 'Tìm kiếm')]
 ${List_Name_Product}    //div[@class='col-xl-4 col-12']//div[2]//div[@class='ProductCard_product__name__6llVj']
 ${Message_error_search}    //div[@class='NoResult_no-result__content__y3KQf']//h3
 ${Icon_search}    //*[name()='svg' and @class='Banner_search-icon__k9VXG']
-
+${Button_close_alert}    //div//button[@aria-label='close']
 *** Keywords ***
 Product Add Card
     Search success with text detail
@@ -20,6 +20,8 @@ Product Add Card
     wait until element is visible    ${Button_Add_To_Card}     ${timeout}
     click element    ${Button_Add_To_Card}
     wait until element is visible    ${Message_Add_cart_success}    ${TimeOut}
+    wait until element is visible    ${Button_close_alert}
+    click element    ${Button_close_alert}
     sleep    3s
 
 Product View Card

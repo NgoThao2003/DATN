@@ -4,11 +4,10 @@ Resource    Utils.resource
 
 
 *** Variables ***
-${Input_Search}    //div[@class='Banner_banner__search-container__V9pTi']//input
+${Input_Search}   //div[@class='Banner_banner__search-container__FojyL']//input
 ${Button_Search}    //button[contains(text(), 'Tìm kiếm')]
-${List_Name_Product}    //div[@class='col-xl-4 col-12']//div[2]//div[@class='ProductCard_product__name__6llVj']
-${Message_error_search}    //div[@class='NoResult_no-result__content__y3KQf']//h3
-${Icon_search}    //*[name()='svg' and @class='Banner_search-icon__k9VXG']
+${List_Name_Product}     //div[@class='col-xl-4 col-12']//div[2]//div[@class='ProductCard_product__name__+2tDs']
+${Message_error_search}     //div[@class='NoResult_no-result__ixgb-']//h3
 
 *** Keywords ***
 Shoule Be Equal Name Product
@@ -28,17 +27,13 @@ Shoule Be Equal Name Product
 
 Search success
     wait until element is visible    ${Input_Search}    ${TimeOut}
-    sleep    3s
     input text    ${Input_Search}    Bánh Mì
-    click element    ${Button_Search}
     sleep    3s
     Shoule Be Equal Name Product
 
 Search success with text detail
     wait until element is visible    ${Input_Search}    ${TimeOut}
-    sleep    3s
-    input text    ${Input_Search}    Bánh Mì Siêu Nhân
-    click element    ${Button_Search}
+    input text    ${Input_Search}    Cơm heo quay
     sleep    3s
     Shoule Be Equal Name Product
 

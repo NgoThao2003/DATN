@@ -5,50 +5,44 @@ Resource    ../Resource/Utils.resource
 Resource    ../Resource/Search.resource
 Resource    ../Resource/ShoppingCardManagement.resource
 Suite Setup    Open Browwer And Login
-
+Library    SeleniumLibrary
 *** Variables ***
-${Button_Pay}    //button//p[contains(text(), 'Thanh toán')]
-${Button_Pay_Disable}    //button[@class='Button_wrapper__GqKsN Button_primary__9MLUH Button_disabled__DkgJ+ Button_order__t1Yc1']
-${Final_Text_Step_Pays}    //h1[contains(text(), 'Bước cuối cùng - Thanh toán')]
-${Building}    //div//span[contains(text(), 'Tòa nhà')]
-${Building_A7}    //ul//li[contains(text(), 'Tòa A7')]
-${Button_Order}     //button//p[contains(text(), 'Đặt đơn')]
-${Button_Đơn_Mua}    (//button//p[contains(text(),'Đơn mua')])[2]
-${Slect_Floor}    //div//span[contains(text(), 'Tầng')]
-${Slect_A7_Floor}    //ul//li[contains(text(), 'Tầng 2')]
-${Classroom}    //div//span[contains(text(), 'Phòng học')]
-${Classrom_201}    //ul//li[contains(text(), 'Phòng 201')]
-${Note}    //input[@placeholder='Hãy gọi điện trước cho tôi']
-${Message_order_create_success}    //div[contains(text(), 'Tạo mới đơn đặt hàng thành công')]
+${Button_Pay}    //div//button//p[contains(text(), 'Thanh toán')]
+${Button_Pay_Disable}    //button[@class='Button_wrapper__6uHX0 Button_primary__CHwmz Button_disabled__UuTSG Button_order__Jbyhw']
+${Final_Text_Step_Pays}   //div//h1[contains(text(), 'Bước cuối cùng - Thanh toán')]
+${Button_Order}     //div//button//p[contains(text(), 'Đặt đơn')]
+${Button_Đơn_Hang}    (//button//p[contains(text(),'Đơn hàng')])[2]
+${Input_sđt}     //div//input[@id='phone-number']
+${Input_address}     //div//input[@id='address-input']
+${Note}    //div//input[@placeholder='Hãy gọi điện trước cho tôi']
+${Message_order_create_success}   //div//div[contains(text(), 'Đặt hàng thành công')]
+${Message_error_sđt}     //div//span[contains(text(), 'Số điện thoại không được để trống')]
+${Message_error_address}     //div//span[contains(text(), 'Địa chỉ không được để trống')]
 ${Icon_loading}    //div[@class='modal-loading__content']
-${Pay_By_E_Wallet}    //div//label//span[contains(text(), 'Thanh toán bằng Ví Điện Tử HaUIFood')]
-${Logo}    //a//img[@class='Header_header__logo__dVBeT']
+${Pay_By_E_Wallet}     //div//label//span[contains(text(), 'Thanh toán bằng Ví Điện Tử HaUI Food')]
+${Logo}     //a//img[@class='Header_header__logo__QkqZR']
+
 *** Keywords ***
 Buy Product
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}
     wait until element is visible    ${Card_product_detail}    5s
+    wait until element is visible    ${Button_Pay}
     click element    ${Button_Pay}
     wait until element is not visible    ${Icon_loading}    ${TimeOut}
     wait until element is visible    ${Final_Text_Step_Pays}    ${TimeOut}
-    click element    ${Building}
-    wait until element is visible    ${Building_A7}    ${TimeOut}
-    click element    ${Building_A7}
-    click element    ${Slect_Floor}
-    wait until element is visible    ${Slect_A7_Floor}    ${TimeOut}
-    click element    ${Slect_A7_Floor}
-    click element    ${Classroom}
-    wait until element is visible    ${Classrom_201}    ${TimeOut}
-    click element    ${Classrom_201}
+    wait until element is visible    ${Input_sđt}
+    input text    ${Input_sđt}    0955437243
+    input text    ${Input_address}    25 ngõ 249 Mai Dịch, Cầu Giấy
     scroll element into view    ${Note}
-    input text    ${Note}    0359234732
+    input text    ${Note}    Giao tận cửa
 
 Message Pay successful And Go To Home Page
     wait until element is visible    ${Message_order_create_success}    ${TimeOut}
-    wait until element is visible    ${Button_Đơn_Mua}    ${TimeOut}
+    wait until element is visible    ${Button_Đơn_Hang}    ${TimeOut}
     wait until element is not visible    ${Icon_loading}     ${TimeOut}
     click element    ${Logo}
-    sleep    2s
+    sleep    1s
 
 *** Test Cases ***
 #Mua hàng thành công, thanh toán khi nhận hàng
@@ -68,56 +62,58 @@ Purchase successful when paying with HauiFood e-wallet
     click element    ${Button_Order}
     Message Pay successful And Go To Home Page
 
+#Không nhập ghi chú
 Purchase successful without entering notes
     Product add card
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}
     wait until element is visible    ${Card_product_detail}    5s
+    wait until element is visible    ${Button_Pay}
     click element    ${Button_Pay}
     wait until element is not visible    ${Icon_loading}    ${TimeOut}
     wait until element is visible    ${Final_Text_Step_Pays}    ${TimeOut}
-    click element    ${Building}
-    wait until element is visible    ${Building_A7}    ${TimeOut}
-    click element    ${Building_A7}
-    click element    ${Slect_Floor}
-    wait until element is visible    ${Slect_A7_Floor}    ${TimeOut}
-    click element    ${Slect_A7_Floor}
-    click element    ${Classroom}
-    wait until element is visible    ${Classrom_201}    ${TimeOut}
-    click element    ${Classrom_201}
+    wait until element is visible    ${Input_sđt}    ${TimeOut}
+    sleep    1s
+    input text    ${Input_sđt}    0955437243
+    input text    ${Input_address}    25 ngõ 249 Mai Dịch, Cầu Giấy
     scroll element into view    ${Button_Order}
     click element    ${Button_Order}
     Message Pay successful And Go To Home Page
 
 
-Purchase failed when building address was not entered
+Purchase failed when phone number not entered
     Product add card
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}
     wait until element is visible    ${Card_product_detail}    5s
+    wait until element is visible    ${Button_Pay}
     click element    ${Button_Pay}
     wait until element is not visible    ${Icon_loading}    ${TimeOut}
     wait until element is visible    ${Final_Text_Step_Pays}    ${TimeOut}
+    wait until element is visible    ${Input_address}
+    input text    ${Input_address}    25 ngõ 249 Mai Dịch, Cầu Giấy
     scroll element into view    ${Note}
-    input text    ${Note}    0359234732
+    input text    ${Note}    Giao tận cửa
+    wait until element is visible    ${Message_error_sđt}
     wait until element is visible    ${Button_Pay_Disable}    ${TimeOut}
     scroll element into view    ${Button_Pay_Disable}
     click element    ${Logo}
     sleep    2s
-
-Purchase failed without selecting a floor
+#
+Purchase failed when address not entered
     Product add card
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}
     wait until element is visible    ${Card_product_detail}    5s
+    wait until element is visible    ${Button_Pay}
     click element    ${Button_Pay}
     wait until element is not visible    ${Icon_loading}    ${TimeOut}
     wait until element is visible    ${Final_Text_Step_Pays}    ${TimeOut}
-    click element    ${Building}
-    wait until element is visible    ${Building_A7}    ${TimeOut}
-    click element    ${Building_A7}
+    wait until element is visible    ${Input_sđt}
+    input text    ${Input_sđt}    0966543765
     scroll element into view    ${Note}
-    input text    ${Note}    03592347
+    input text    ${Note}    Giao tận cửa
+    wait until element is visible    ${Message_error_address}
     wait until element is visible    ${Button_Pay_Disable}    ${TimeOut}
     scroll element into view    ${Button_Pay_Disable}
     click element    ${Logo}

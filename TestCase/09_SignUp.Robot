@@ -3,10 +3,10 @@ Resource    ../Resource/SignUp.resource
 Resource    ../Resource/Library.resource
 Resource    ../Resource/Utils.resource
 Suite Setup    Open Browser   ${URL_SignUp}     ${BROWSER}
-
+Library    SeleniumLibrary
 *** Variables ***
-${Message_existed_Email}     //div[contains(text(), 'Email đã tồn tại')]
-${Message_SignUp_Success}  //div[contains(text(), 'Đăng ký tài khoản thành công')]
+${Message_existed_Email}     //div//div[contains(text(), 'Email đã tồn tại')]
+${Message_SignUp_Success}  //div//div[contains(text(), 'Đăng ký tài khoản thành công')]
 ${Message_Blank_Name}    //p[contains(text(), 'Vui lòng nhập họ tên')]
 ${Message_Blank_Email}    //p[contains(text(), 'Vui lòng nhập email.')]
 ${Message_Blank_Password}    //p[contains(text(), 'Vui lòng nhập mật khẩu.')]
