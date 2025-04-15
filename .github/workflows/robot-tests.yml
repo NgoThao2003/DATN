@@ -22,6 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install robotframework
+          pip install robotframework-selenium library
 
       - name: Run Robot Framework tests
         run: |
