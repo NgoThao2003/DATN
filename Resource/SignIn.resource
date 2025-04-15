@@ -19,7 +19,18 @@ Login Web Haui Food
     input text    ${Password_Locator}    ${Password}
     click button    ${Button_SignIn}
 
+#Open Browwer And Login
+#   Open Browser   ${URL}    ${BROWSER}    options=add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
+##   Open Browser Headless Chrome
+#   Login Web Haui Food    thaontt@gmail.com    Thao2702@
+
 Open Browwer And Login
-   Open Browser   ${URL}    ${BROWSER}    options=add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
-#   Open Browser Headless Chrome
-   Login Web Haui Food    thaontt@gmail.com    Thao2702@
+    ${random}=    Generate Random String    10
+    ${user_data_dir}=    Set Variable    /tmp/user-data-${random}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Call Method    ${options}    add_argument    --user-data-dir=${user_data_dir}
+    Open Browser    ${URL}    chrome    options=${options}
+    Login Web Haui Food    thaontt@gmail.com    Thao2702@

@@ -1,407 +1,407 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-04-15T23:50:59.189717" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-04-15T23:56:09.556546" rpa="false" schemaversion="5">
 <suite id="s1" name="01 SignIn" source="D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\01_SignIn.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-04-15T23:50:59.463762" level="INFO">Opening browser 'chrome' to base url 'https://hauifood.vn/auth/login'.</msg>
+<msg time="2025-04-15T23:56:09.831607" level="INFO">Opening browser 'chrome' to base url 'https://hauifood.vn/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-15T23:50:59.462762" elapsed="2.203731"/>
+<status status="PASS" start="2025-04-15T23:56:09.831607" elapsed="1.997299"/>
 </kw>
 <test id="s1-t1" name="Login failed when entering wrong email" line="20">
 <kw name="Login Web Haui Food" owner="SignIn">
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-15T23:51:01.668494" elapsed="0.054015"/>
+<status status="PASS" start="2025-04-15T23:56:11.831906" elapsed="0.062017"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:01.723510" level="INFO">Executing JavaScript:
+<msg time="2025-04-15T23:56:11.895921" level="INFO">Executing JavaScript:
 document.body.style.zoom = '0.8';
 Without any arguments.</msg>
 <arg>document.body.style.zoom = '0.8';</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-04-15T23:51:01.722509" elapsed="0.012001"/>
+<status status="PASS" start="2025-04-15T23:56:11.894924" elapsed="0.022002"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Email_Locator}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:01.734510" elapsed="0.645485"/>
+<status status="PASS" start="2025-04-15T23:56:11.917926" elapsed="0.909901"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:02.380998" level="INFO">Typing text 'thaontt453@gmail.com' into text field '//div//input[@type='email']'.</msg>
+<msg time="2025-04-15T23:56:12.828824" level="INFO">Typing text 'thaontt453@gmail.com' into text field '//div//input[@type='email']'.</msg>
 <arg>${Email_Locator}</arg>
 <arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:02.379995" elapsed="0.175040"/>
+<status status="PASS" start="2025-04-15T23:56:12.827827" elapsed="0.164036"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:02.556033" level="INFO">Typing text 'thao2702@' into text field '//div//input[@type='password']'.</msg>
+<msg time="2025-04-15T23:56:12.992860" level="INFO">Typing text 'thao2702@' into text field '//div//input[@type='password']'.</msg>
 <arg>${Password_Locator}</arg>
 <arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:02.555035" elapsed="0.102022"/>
+<status status="PASS" start="2025-04-15T23:56:12.991863" elapsed="0.114025"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:02.657057" level="INFO">Clicking button '(//div//button)[1]'.</msg>
+<msg time="2025-04-15T23:56:13.105888" level="INFO">Clicking button '(//div//button)[1]'.</msg>
 <arg>${Button_SignIn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:02.657057" elapsed="0.080018"/>
+<status status="PASS" start="2025-04-15T23:56:13.105888" elapsed="0.094018"/>
 </kw>
 <arg>thaontt453@gmail.com</arg>
 <arg>thao2702@</arg>
-<status status="PASS" start="2025-04-15T23:51:01.667493" elapsed="1.069582"/>
+<status status="PASS" start="2025-04-15T23:56:11.831906" elapsed="1.368000"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:02.737075" level="INFO">Clicking button '(//div//button)[1]'.</msg>
+<msg time="2025-04-15T23:56:13.200907" level="INFO">Clicking button '(//div//button)[1]'.</msg>
 <arg>${Button_SignIn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:02.737075" elapsed="0.465116"/>
+<status status="PASS" start="2025-04-15T23:56:13.199906" elapsed="0.232052"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Message_Error_SignIn}</arg>
 <arg>${TimeOut}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:03.202191" elapsed="0.247867"/>
+<status status="PASS" start="2025-04-15T23:56:13.432958" elapsed="0.245205"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:03.451057" level="INFO">Clicking element '//button[@aria-label='close']'.</msg>
+<msg time="2025-04-15T23:56:13.679162" level="INFO">Clicking element '//button[@aria-label='close']'.</msg>
 <arg>${Button_close_alert}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:03.451057" elapsed="0.078019"/>
+<status status="PASS" start="2025-04-15T23:56:13.678163" elapsed="0.087019"/>
 </kw>
 <kw name="Clear Text" owner="Utils">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:03.530074" level="INFO">Clicking element '//div//input[@type='email']'.</msg>
+<msg time="2025-04-15T23:56:13.766181" level="INFO">Clicking element '//div//input[@type='email']'.</msg>
 <arg>${Clear_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:03.530074" elapsed="0.081021"/>
+<status status="PASS" start="2025-04-15T23:56:13.766181" elapsed="0.079018"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:03.612095" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='email'] element.</msg>
-<msg time="2025-04-15T23:51:03.904871" level="INFO">Pressing special key CONTROL down.</msg>
-<msg time="2025-04-15T23:51:03.904871" level="INFO">Sending key a</msg>
-<msg time="2025-04-15T23:51:03.904871" level="INFO">Releasing special key CONTROL.</msg>
-<msg time="2025-04-15T23:51:03.911873" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-04-15T23:51:03.911873" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-15T23:56:13.846199" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='email'] element.</msg>
+<msg time="2025-04-15T23:56:14.148453" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-15T23:56:14.148453" level="INFO">Sending key a</msg>
+<msg time="2025-04-15T23:56:14.148453" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-04-15T23:56:14.155456" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-15T23:56:14.155456" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${Clear_element}</arg>
 <arg>CTRL+a</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-04-15T23:51:03.611095" elapsed="0.307778"/>
+<status status="PASS" start="2025-04-15T23:56:13.846199" elapsed="0.315258"/>
 </kw>
 <arg>${Email_Locator}</arg>
-<status status="PASS" start="2025-04-15T23:51:03.529076" elapsed="0.389797"/>
+<status status="PASS" start="2025-04-15T23:56:13.765182" elapsed="0.396275"/>
 </kw>
 <kw name="Clear Text" owner="Utils">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:03.919872" level="INFO">Clicking element '//div//input[@type='password']'.</msg>
+<msg time="2025-04-15T23:56:14.162456" level="INFO">Clicking element '//div//input[@type='password']'.</msg>
 <arg>${Clear_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:03.918873" elapsed="0.063015"/>
+<status status="PASS" start="2025-04-15T23:56:14.162456" elapsed="0.057015"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:03.982888" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='password'] element.</msg>
-<msg time="2025-04-15T23:51:04.269088" level="INFO">Pressing special key CONTROL down.</msg>
-<msg time="2025-04-15T23:51:04.269088" level="INFO">Sending key a</msg>
-<msg time="2025-04-15T23:51:04.269088" level="INFO">Releasing special key CONTROL.</msg>
-<msg time="2025-04-15T23:51:04.277089" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-04-15T23:51:04.277089" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-15T23:56:14.220469" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='password'] element.</msg>
+<msg time="2025-04-15T23:56:14.495538" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-15T23:56:14.495538" level="INFO">Sending key a</msg>
+<msg time="2025-04-15T23:56:14.495538" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-04-15T23:56:14.504540" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-15T23:56:14.505544" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${Clear_element}</arg>
 <arg>CTRL+a</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-04-15T23:51:03.982888" elapsed="0.300203"/>
+<status status="PASS" start="2025-04-15T23:56:14.219471" elapsed="0.293070"/>
 </kw>
 <arg>${Password_Locator}</arg>
-<status status="PASS" start="2025-04-15T23:51:03.918873" elapsed="0.364218"/>
+<status status="PASS" start="2025-04-15T23:56:14.161457" elapsed="0.351084"/>
 </kw>
 <doc>Login with invalid email</doc>
-<status status="PASS" start="2025-04-15T23:51:01.667493" elapsed="2.616597"/>
+<status status="PASS" start="2025-04-15T23:56:11.828906" elapsed="2.684637"/>
 </test>
 <test id="s1-t2" name="Login failed when entering wrong password" line="29">
 <kw name="Login Web Haui Food" owner="SignIn">
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.285090" elapsed="0.002001"/>
+<status status="PASS" start="2025-04-15T23:56:14.514541" elapsed="0.003001"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:04.288091" level="INFO">Executing JavaScript:
+<msg time="2025-04-15T23:56:14.518542" level="INFO">Executing JavaScript:
 document.body.style.zoom = '0.8';
 Without any arguments.</msg>
 <arg>document.body.style.zoom = '0.8';</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.288091" elapsed="0.006002"/>
+<status status="PASS" start="2025-04-15T23:56:14.517542" elapsed="0.008003"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Email_Locator}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.294093" elapsed="0.013002"/>
+<status status="PASS" start="2025-04-15T23:56:14.525545" elapsed="0.020004"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:04.308097" level="INFO">Typing text 'thanhthaongo845@gmail.com' into text field '//div//input[@type='email']'.</msg>
+<msg time="2025-04-15T23:56:14.545549" level="INFO">Typing text 'thanhthaongo845@gmail.com' into text field '//div//input[@type='email']'.</msg>
 <arg>${Email_Locator}</arg>
 <arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.308097" elapsed="0.110023"/>
+<status status="PASS" start="2025-04-15T23:56:14.545549" elapsed="0.119027"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:04.418120" level="INFO">Typing text 'thao27076@@' into text field '//div//input[@type='password']'.</msg>
+<msg time="2025-04-15T23:56:14.664576" level="INFO">Typing text 'thao27076@@' into text field '//div//input[@type='password']'.</msg>
 <arg>${Password_Locator}</arg>
 <arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.418120" elapsed="0.085021"/>
+<status status="PASS" start="2025-04-15T23:56:14.664576" elapsed="0.088020"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:04.503141" level="INFO">Clicking button '(//div//button)[1]'.</msg>
+<msg time="2025-04-15T23:56:14.753595" level="INFO">Clicking button '(//div//button)[1]'.</msg>
 <arg>${Button_SignIn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.503141" elapsed="0.062012"/>
+<status status="PASS" start="2025-04-15T23:56:14.752596" elapsed="0.058013"/>
 </kw>
 <arg>thanhthaongo845@gmail.com</arg>
 <arg>thao27076@@</arg>
-<status status="PASS" start="2025-04-15T23:51:04.285090" elapsed="0.281064"/>
+<status status="PASS" start="2025-04-15T23:56:14.514541" elapsed="0.296068"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:04.566154" level="INFO">Clicking button '(//div//button)[1]'.</msg>
+<msg time="2025-04-15T23:56:14.811608" level="INFO">Clicking button '(//div//button)[1]'.</msg>
 <arg>${Button_SignIn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.566154" elapsed="0.064623"/>
+<status status="PASS" start="2025-04-15T23:56:14.810609" elapsed="0.323929"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Message_Error_SignIn}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.630777" elapsed="0.013118"/>
+<status status="PASS" start="2025-04-15T23:56:15.135539" elapsed="0.012001"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:04.643895" level="INFO">Clicking element '//button[@aria-label='close']'.</msg>
+<msg time="2025-04-15T23:56:15.148541" level="INFO">Clicking element '//button[@aria-label='close']'.</msg>
 <arg>${Button_close_alert}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.643895" elapsed="0.048003"/>
+<status status="PASS" start="2025-04-15T23:56:15.148541" elapsed="0.049011"/>
 </kw>
 <kw name="Clear Text" owner="Utils">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:04.692897" level="INFO">Clicking element '//div//input[@type='email']'.</msg>
+<msg time="2025-04-15T23:56:15.198551" level="INFO">Clicking element '//div//input[@type='email']'.</msg>
 <arg>${Clear_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.692897" elapsed="0.057015"/>
+<status status="PASS" start="2025-04-15T23:56:15.197552" elapsed="0.076019"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:04.750910" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='email'] element.</msg>
-<msg time="2025-04-15T23:51:05.031317" level="INFO">Pressing special key CONTROL down.</msg>
-<msg time="2025-04-15T23:51:05.031317" level="INFO">Sending key a</msg>
-<msg time="2025-04-15T23:51:05.031317" level="INFO">Releasing special key CONTROL.</msg>
-<msg time="2025-04-15T23:51:05.038318" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-04-15T23:51:05.038318" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-15T23:56:15.274570" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='email'] element.</msg>
+<msg time="2025-04-15T23:56:15.568352" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-15T23:56:15.568352" level="INFO">Sending key a</msg>
+<msg time="2025-04-15T23:56:15.568352" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-04-15T23:56:15.577352" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-15T23:56:15.577352" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${Clear_element}</arg>
 <arg>CTRL+a</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-04-15T23:51:04.750910" elapsed="0.295410"/>
+<status status="PASS" start="2025-04-15T23:56:15.273571" elapsed="0.314784"/>
 </kw>
 <arg>${Email_Locator}</arg>
-<status status="PASS" start="2025-04-15T23:51:04.691898" elapsed="0.354422"/>
+<status status="PASS" start="2025-04-15T23:56:15.197552" elapsed="0.390803"/>
 </kw>
 <kw name="Clear Text" owner="Utils">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:05.047320" level="INFO">Clicking element '//div//input[@type='password']'.</msg>
+<msg time="2025-04-15T23:56:15.589356" level="INFO">Clicking element '//div//input[@type='password']'.</msg>
 <arg>${Clear_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.046320" elapsed="0.051377"/>
+<status status="PASS" start="2025-04-15T23:56:15.589356" elapsed="0.087019"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:05.098696" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='password'] element.</msg>
-<msg time="2025-04-15T23:51:05.394763" level="INFO">Pressing special key CONTROL down.</msg>
-<msg time="2025-04-15T23:51:05.394763" level="INFO">Sending key a</msg>
-<msg time="2025-04-15T23:51:05.394763" level="INFO">Releasing special key CONTROL.</msg>
-<msg time="2025-04-15T23:51:05.400765" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-04-15T23:51:05.400765" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-15T23:56:15.677375" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='password'] element.</msg>
+<msg time="2025-04-15T23:56:15.959932" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-15T23:56:15.959932" level="INFO">Sending key a</msg>
+<msg time="2025-04-15T23:56:15.959932" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-04-15T23:56:15.965934" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-15T23:56:15.965934" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${Clear_element}</arg>
 <arg>CTRL+a</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.098696" elapsed="0.307069"/>
+<status status="PASS" start="2025-04-15T23:56:15.676375" elapsed="0.302561"/>
 </kw>
 <arg>${Password_Locator}</arg>
-<status status="PASS" start="2025-04-15T23:51:05.046320" elapsed="0.359445"/>
+<status status="PASS" start="2025-04-15T23:56:15.589356" elapsed="0.389580"/>
 </kw>
 <doc>Login with invalid password</doc>
-<status status="PASS" start="2025-04-15T23:51:04.284090" elapsed="1.122675"/>
+<status status="PASS" start="2025-04-15T23:56:14.514541" elapsed="1.464395"/>
 </test>
 <test id="s1-t3" name="Login failed when email field is left blank" line="39">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Email_Locator}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.407768" elapsed="0.010998"/>
+<status status="PASS" start="2025-04-15T23:56:15.980937" elapsed="0.018003"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:05.420768" level="INFO">Typing text '' into text field '//div//input[@type='email']'.</msg>
+<msg time="2025-04-15T23:56:15.999941" level="INFO">Typing text '' into text field '//div//input[@type='email']'.</msg>
 <arg>${Email_Locator}</arg>
 <arg>${EMPTY}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.419768" elapsed="0.055014"/>
+<status status="PASS" start="2025-04-15T23:56:15.998940" elapsed="0.079023"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:05.475781" level="INFO">Typing text 'thao2702@' into text field '//div//input[@type='password']'.</msg>
+<msg time="2025-04-15T23:56:16.078960" level="INFO">Typing text 'thao2702@' into text field '//div//input[@type='password']'.</msg>
 <arg>${Password_Locator}</arg>
 <arg>thao2702@</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.474782" elapsed="0.075016"/>
+<status status="PASS" start="2025-04-15T23:56:16.077963" elapsed="0.089017"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Message_error_MissEmail}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.549798" elapsed="0.016817"/>
+<status status="PASS" start="2025-04-15T23:56:16.167979" elapsed="0.019005"/>
 </kw>
 <kw name="Clear Text" owner="Utils">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:05.568615" level="INFO">Clicking element '//div//input[@type='password']'.</msg>
+<msg time="2025-04-15T23:56:16.187984" level="INFO">Clicking element '//div//input[@type='password']'.</msg>
 <arg>${Clear_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.568615" elapsed="0.047496"/>
+<status status="PASS" start="2025-04-15T23:56:16.187984" elapsed="0.052010"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:05.616111" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='password'] element.</msg>
-<msg time="2025-04-15T23:51:05.897069" level="INFO">Pressing special key CONTROL down.</msg>
-<msg time="2025-04-15T23:51:05.897069" level="INFO">Sending key a</msg>
-<msg time="2025-04-15T23:51:05.897069" level="INFO">Releasing special key CONTROL.</msg>
-<msg time="2025-04-15T23:51:05.904671" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-04-15T23:51:05.904671" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-15T23:56:16.240996" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='password'] element.</msg>
+<msg time="2025-04-15T23:56:16.521497" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-15T23:56:16.521497" level="INFO">Sending key a</msg>
+<msg time="2025-04-15T23:56:16.521497" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-04-15T23:56:16.526497" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-15T23:56:16.526497" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${Clear_element}</arg>
 <arg>CTRL+a</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.616111" elapsed="0.295829"/>
+<status status="PASS" start="2025-04-15T23:56:16.239994" elapsed="0.292504"/>
 </kw>
 <arg>${Password_Locator}</arg>
-<status status="PASS" start="2025-04-15T23:51:05.567616" elapsed="0.344324"/>
+<status status="PASS" start="2025-04-15T23:56:16.187984" elapsed="0.344514"/>
 </kw>
 <doc>Login with email blank</doc>
-<status status="PASS" start="2025-04-15T23:51:05.407768" elapsed="0.504172"/>
+<status status="PASS" start="2025-04-15T23:56:15.979936" elapsed="0.552562"/>
 </test>
 <test id="s1-t4" name="Login failed when password field is left blank" line="47">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Email_Locator}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.912950" elapsed="0.010997"/>
+<status status="PASS" start="2025-04-15T23:56:16.533499" elapsed="0.015003"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:05.924959" level="INFO">Typing text 'thanhthaongo845@gmail.com' into text field '//div//input[@type='email']'.</msg>
+<msg time="2025-04-15T23:56:16.548502" level="INFO">Typing text 'thanhthaongo845@gmail.com' into text field '//div//input[@type='email']'.</msg>
 <arg>${Email_Locator}</arg>
 <arg>thanhthaongo845@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:05.923947" elapsed="0.088426"/>
+<status status="PASS" start="2025-04-15T23:56:16.548502" elapsed="0.112026"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:06.013372" level="INFO">Typing text '' into text field '//div//input[@type='password']'.</msg>
+<msg time="2025-04-15T23:56:16.662527" level="INFO">Typing text '' into text field '//div//input[@type='password']'.</msg>
 <arg>${Password_Locator}</arg>
 <arg>${EMPTY}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.012373" elapsed="0.055375"/>
+<status status="PASS" start="2025-04-15T23:56:16.661528" elapsed="0.066014"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Message_error_MissPassword}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.067748" elapsed="0.020003"/>
+<status status="PASS" start="2025-04-15T23:56:16.728543" elapsed="0.017003"/>
 </kw>
 <kw name="Clear Text" owner="Utils">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:06.088751" level="INFO">Clicking element '//div//input[@type='email']'.</msg>
+<msg time="2025-04-15T23:56:16.746547" level="INFO">Clicking element '//div//input[@type='email']'.</msg>
 <arg>${Clear_element}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.087751" elapsed="0.065015"/>
+<status status="PASS" start="2025-04-15T23:56:16.746547" elapsed="0.052012"/>
 </kw>
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:06.153765" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='email'] element.</msg>
-<msg time="2025-04-15T23:51:06.432830" level="INFO">Pressing special key CONTROL down.</msg>
-<msg time="2025-04-15T23:51:06.432830" level="INFO">Sending key a</msg>
-<msg time="2025-04-15T23:51:06.432830" level="INFO">Releasing special key CONTROL.</msg>
-<msg time="2025-04-15T23:51:06.439830" level="INFO">Pressing special key BACKSPACE to element.</msg>
-<msg time="2025-04-15T23:51:06.439830" level="INFO">Releasing special key BACKSPACE.</msg>
+<msg time="2025-04-15T23:56:16.799559" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //div//input[@type='email'] element.</msg>
+<msg time="2025-04-15T23:56:17.077421" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2025-04-15T23:56:17.077421" level="INFO">Sending key a</msg>
+<msg time="2025-04-15T23:56:17.077421" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2025-04-15T23:56:17.086424" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg time="2025-04-15T23:56:17.086424" level="INFO">Releasing special key BACKSPACE.</msg>
 <arg>${Clear_element}</arg>
 <arg>CTRL+a</arg>
 <arg>BACKSPACE</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.153765" elapsed="0.293065"/>
+<status status="PASS" start="2025-04-15T23:56:16.798559" elapsed="0.295866"/>
 </kw>
 <arg>${Email_Locator}</arg>
-<status status="PASS" start="2025-04-15T23:51:06.087751" elapsed="0.359079"/>
+<status status="PASS" start="2025-04-15T23:56:16.745546" elapsed="0.348879"/>
 </kw>
 <doc>Login with password blank</doc>
-<status status="PASS" start="2025-04-15T23:51:05.912950" elapsed="0.533880"/>
+<status status="PASS" start="2025-04-15T23:56:16.533499" elapsed="0.560926"/>
 </test>
 <test id="s1-t5" name="Login Success when valid fields are entered" line="56">
 <kw name="Login Web Haui Food" owner="SignIn">
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.448831" elapsed="0.002003"/>
+<status status="PASS" start="2025-04-15T23:56:17.095425" elapsed="0.003001"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:06.450834" level="INFO">Executing JavaScript:
+<msg time="2025-04-15T23:56:17.098426" level="INFO">Executing JavaScript:
 document.body.style.zoom = '0.8';
 Without any arguments.</msg>
 <arg>document.body.style.zoom = '0.8';</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.450834" elapsed="0.003999"/>
+<status status="PASS" start="2025-04-15T23:56:17.098426" elapsed="0.005002"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Email_Locator}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.454833" elapsed="0.013004"/>
+<status status="PASS" start="2025-04-15T23:56:17.104429" elapsed="0.014003"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:06.468837" level="INFO">Typing text 'thaontt@gmail.com' into text field '//div//input[@type='email']'.</msg>
+<msg time="2025-04-15T23:56:17.119431" level="INFO">Typing text 'thaontt@gmail.com' into text field '//div//input[@type='email']'.</msg>
 <arg>${Email_Locator}</arg>
 <arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.467837" elapsed="0.081017"/>
+<status status="PASS" start="2025-04-15T23:56:17.118432" elapsed="0.088017"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:06.548854" level="INFO">Typing text 'Thao2702@' into text field '//div//input[@type='password']'.</msg>
+<msg time="2025-04-15T23:56:17.207451" level="INFO">Typing text 'Thao2702@' into text field '//div//input[@type='password']'.</msg>
 <arg>${Password_Locator}</arg>
 <arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.548854" elapsed="0.069017"/>
+<status status="PASS" start="2025-04-15T23:56:17.206449" elapsed="0.088023"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:06.617871" level="INFO">Clicking button '(//div//button)[1]'.</msg>
+<msg time="2025-04-15T23:56:17.295470" level="INFO">Clicking button '(//div//button)[1]'.</msg>
 <arg>${Button_SignIn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.617871" elapsed="0.060012"/>
+<status status="PASS" start="2025-04-15T23:56:17.295470" elapsed="0.100025"/>
 </kw>
 <arg>thaontt@gmail.com</arg>
 <arg>Thao2702@</arg>
-<status status="PASS" start="2025-04-15T23:51:06.447831" elapsed="0.231052"/>
+<status status="PASS" start="2025-04-15T23:56:17.095425" elapsed="0.300070"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-15T23:51:06.678883" level="INFO">Clicking button '(//div//button)[1]'.</msg>
+<msg time="2025-04-15T23:56:17.398495" level="INFO">Clicking button '(//div//button)[1]'.</msg>
 <arg>${Button_SignIn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.678883" elapsed="0.050013"/>
+<status status="PASS" start="2025-04-15T23:56:17.397494" elapsed="0.158034"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Message_SignIn_Success}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T23:51:06.729894" elapsed="0.683517"/>
+<status status="PASS" start="2025-04-15T23:56:17.556530" elapsed="0.708968"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-15T23:51:12.414915" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-04-15T23:56:23.267609" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-15T23:51:07.413411" elapsed="5.001504"/>
+<status status="PASS" start="2025-04-15T23:56:18.266498" elapsed="5.001111"/>
 </kw>
 <doc>Login with valid information</doc>
-<status status="PASS" start="2025-04-15T23:51:06.447831" elapsed="5.967084"/>
+<status status="PASS" start="2025-04-15T23:56:17.095425" elapsed="6.172184"/>
 </test>
-<status status="PASS" start="2025-04-15T23:50:59.192700" elapsed="13.223216"/>
+<status status="PASS" start="2025-04-15T23:56:09.558532" elapsed="13.710076"/>
 </suite>
 <statistics>
 <total>
