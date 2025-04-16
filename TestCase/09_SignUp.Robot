@@ -2,7 +2,7 @@
 Resource    ../Resource/SignUp.resource
 Resource    ../Resource/Library.resource
 Resource    ../Resource/Utils.resource
-Suite Setup    Open Browser   ${URL_SignUp}     ${BROWSER}    options=add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
+Suite Setup    Open Browser   ${URL}    ${BROWSER}
 #Suite Setup    Open Browser Headless Chrome
 
 *** Variables ***

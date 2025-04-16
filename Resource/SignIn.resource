@@ -20,17 +20,28 @@ Login Web Haui Food
     click button    ${Button_SignIn}
 
 #Open Browwer And Login
-#   Open Browser   ${URL}    ${BROWSER}    options=add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
-##   Open Browser Headless Chrome
+#   Open Browser   ${URL}    ${BROWSER}    options=--headless,--no-sandbox,--disable-dev-shm-usage
 #   Login Web Haui Food    thaontt@gmail.com    Thao2702@
 
+
+#Open Browwer And Login
+#  ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+##   Call Method    ${options}    add_argument    --headless      <-- Bỏ dòng này
+#    Call Method    ${options}    add_argument    --no-sandbox
+#    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+#    ${arg}=    Evaluate    "--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase"
+#    Call Method    ${options}    add_argument    ${arg}
+#    Open Browser   ${URL}    ${BROWSER}    options=${options}
+#    Login Web Haui Food    thaontt@gmail.com    Thao2702@
+
 Open Browwer And Login
-    ${random}=    Generate Random String    10
-    ${user_data_dir}=    Set Variable    /tmp/user-data-${random}
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --headless
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    ${is_ci}=    Get Environment Variable    CI    False
+    Run Keyword If    '${is_ci}'=='true'    Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Call Method    ${options}    add_argument    --user-data-dir=${user_data_dir}
-    Open Browser    ${URL}    chrome    options=${options}
+    # Nếu cần dùng profile có sẵn:
+#     ${arg}=    Evaluate    "--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase"
+#     Call Method    ${options}    add_argument    ${arg}
+    Open Browser   ${URL}    ${BROWSER}    options=${options}
     Login Web Haui Food    thaontt@gmail.com    Thao2702@

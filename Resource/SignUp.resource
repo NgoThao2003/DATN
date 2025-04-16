@@ -21,6 +21,6 @@ SignUp Web Haui Food
     click button    ${Button_SignUp}
 
 Open Browwer And SignUp
-   Open Browser   ${URL}    ${BROWSER}    options=add_argument(--headless);add_argument(--no-sandbox);add_argument(--disable-dev-shm-usage)
+   Open Browser   ${URL}    ${BROWSER}    options=--headless,--no-sandbox,--disable-dev-shm-usage
 #   Open Browser Headless Chrome
    SignUp Web Haui Food   thanhthaongo845@gmail.com    Thao2702@
