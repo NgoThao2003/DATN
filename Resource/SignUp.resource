@@ -5,7 +5,7 @@ Resource    Utils.resource
 ${BROWSER}   chrome
 ${URL_SignUp}  https://hauifood.vn/auth/signup
 ${Email_Locator}    //input[@type='email']
-${Password_Locator}    //input[@type='password']
+${Password_Locator}  //input[@type='password']
 ${Name_Locator}    //input[@placeholder='Họ tên']
 ${Button_SignUp}    (//button)[1]
 
@@ -20,7 +20,6 @@ SignUp Web Haui Food
     input text    ${Password_Locator}    ${Password}
     click button    ${Button_SignUp}
 
-Open Browwer And SignUp
-   Open Browser   ${URL}    ${BROWSER}    options=--headless,--no-sandbox,--disable-dev-shm-usage
-#   Open Browser Headless Chrome
-   SignUp Web Haui Food   thanhthaongo845@gmail.com    Thao2702@
+#Open Browwer And SignUp
+#   Open Browser   ${URL}    ${BROWSER}    options=--headless,--no-sandbox,--disable-dev-shm-usage
+#   SignUp Web Haui Food   thanhthaongo845@gmail.com    Thao2702@

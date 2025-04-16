@@ -23,25 +23,17 @@ Login Web Haui Food
 #   Open Browser   ${URL}    ${BROWSER}    options=--headless,--no-sandbox,--disable-dev-shm-usage
 #   Login Web Haui Food    thaontt@gmail.com    Thao2702@
 
-
-#Open Browwer And Login
-#  ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-##   Call Method    ${options}    add_argument    --headless      <-- Bỏ dòng này
-#    Call Method    ${options}    add_argument    --no-sandbox
-#    Call Method    ${options}    add_argument    --disable-dev-shm-usage
-#    ${arg}=    Evaluate    "--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase"
-#    Call Method    ${options}    add_argument    ${arg}
-#    Open Browser   ${URL}    ${BROWSER}    options=${options}
-#    Login Web Haui Food    thaontt@gmail.com    Thao2702@
-
-Open Browwer And Login
+Open Brower SignUp SignIn
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     ${is_ci}=    Get Environment Variable    CI    False
     Run Keyword If    '${is_ci}'=='true'    Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     # Nếu cần dùng profile có sẵn:
-#     ${arg}=    Evaluate    "--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase"
-#     Call Method    ${options}    add_argument    ${arg}
+     ${arg}=    Evaluate    "--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase"
+     Call Method    ${options}    add_argument    ${arg}
     Open Browser   ${URL}    ${BROWSER}    options=${options}
+
+Open Browwer And Login
+    Open Brower SignUp SignIn
     Login Web Haui Food    thaontt@gmail.com    Thao2702@

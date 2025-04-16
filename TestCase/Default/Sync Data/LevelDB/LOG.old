@@ -1,2 +1,3 @@
-2025/04/16-23:38:54.160 15d4 Creating DB D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\Default\Sync Data\LevelDB since it was missing.
-2025/04/16-23:38:54.174 15d4 Reusing MANIFEST D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\Default\Sync Data\LevelDB/MANIFEST-000001
+2025/04/17-00:09:59.514 3c58 Reusing MANIFEST D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\Default\Sync Data\LevelDB/MANIFEST-000001
+2025/04/17-00:09:59.516 3c58 Recovering log #3
+2025/04/17-00:09:59.517 3c58 Reusing old log D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\Default\Sync Data\LevelDB/000003.log 
