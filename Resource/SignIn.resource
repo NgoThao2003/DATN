@@ -30,8 +30,8 @@ Open Brower SignUp SignIn
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
     # Nếu cần dùng profile có sẵn:
-     ${arg}=    Evaluate    "--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase"
-     Call Method    ${options}    add_argument    ${arg}
+    ${arg}=    Evaluate    "--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase"
+    Call Method    ${options}    add_argument    ${arg}
     Open Browser   ${URL}    ${BROWSER}    options=${options}
 
 Open Browwer And Login
