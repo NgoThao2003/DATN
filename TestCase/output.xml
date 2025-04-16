@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-04-17T00:16:45.775881" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-04-17T00:20:55.113935" rpa="false" schemaversion="5">
 <suite id="s1" name="06 ViewOrderList" source="D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\06_ViewOrderList.robot">
 <kw name="Open Browwer And Login" owner="SignIn" type="SETUP">
-<kw name="Open Brower SignUp SignIn" owner="SignIn">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-04-17T00:16:46.122961" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000027CD19A5AF0&gt;</msg>
+<msg time="2025-04-17T00:20:55.570037" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000020414CA1850&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-04-17T00:16:46.121961" elapsed="0.001000"/>
+<status status="PASS" start="2025-04-17T00:20:55.569037" elapsed="0.001000"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-04-17T00:16:46.122961" level="INFO">${is_ci} = False</msg>
+<msg time="2025-04-17T00:20:55.570037" level="INFO">${is_ci} = False</msg>
 <var>${is_ci}</var>
 <arg>CI</arg>
 <arg>False</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-04-17T00:16:46.122961" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-17T00:20:55.570037" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${is_ci}'=='true'</arg>
@@ -26,166 +25,231 @@
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-04-17T00:16:46.122961" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-17T00:20:55.570037" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--no-sandbox</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-04-17T00:16:46.122961" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-17T00:20:55.571036" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-dev-shm-usage</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-04-17T00:16:46.123962" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-17T00:20:55.571036" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-04-17T00:16:46.123962" level="INFO">${arg} = --user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase</msg>
+<msg time="2025-04-17T00:20:55.571036" level="INFO">${arg} = --user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase</msg>
 <var>${arg}</var>
 <arg>"--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase"</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-04-17T00:16:46.123962" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-17T00:20:55.571036" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>${arg}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-04-17T00:16:46.123962" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-17T00:20:55.571036" elapsed="0.000000"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:46.123962" level="INFO">Opening browser 'chrome' to base url 'https://hauifood.vn/auth/login'.</msg>
+<msg time="2025-04-17T00:20:55.572037" level="INFO">Opening browser 'chrome' to base url 'https://hauifood.vn/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-17T00:16:46.123962" elapsed="2.095453"/>
-</kw>
-<status status="PASS" start="2025-04-17T00:16:46.121961" elapsed="2.098454"/>
+<status status="PASS" start="2025-04-17T00:20:55.572037" elapsed="2.687603"/>
 </kw>
 <kw name="Login Web Haui Food" owner="SignIn">
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-17T00:16:48.220415" elapsed="0.021004"/>
+<status status="PASS" start="2025-04-17T00:20:58.260640" elapsed="0.037010"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:48.242418" level="INFO">Executing JavaScript:
+<msg time="2025-04-17T00:20:58.299653" level="INFO">Executing JavaScript:
 document.body.style.zoom = '0.8';
 Without any arguments.</msg>
 <arg>document.body.style.zoom = '0.8';</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-04-17T00:16:48.242418" elapsed="0.106026"/>
+<status status="PASS" start="2025-04-17T00:20:58.298648" elapsed="0.018003"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Email_Locator}</arg>
 <arg>3s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T00:16:48.349443" elapsed="0.274061"/>
+<status status="PASS" start="2025-04-17T00:20:58.316651" elapsed="0.782177"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:48.623504" level="INFO">Typing text 'thaontt@gmail.com' into text field '//div//input[@type='email']'.</msg>
+<msg time="2025-04-17T00:20:59.099827" level="INFO">Typing text 'thaontt@gmail.com' into text field '//div//input[@type='email']'.</msg>
 <arg>${Email_Locator}</arg>
 <arg>${Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T00:16:48.623504" elapsed="0.160036"/>
+<status status="PASS" start="2025-04-17T00:20:59.098828" elapsed="0.293065"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:48.784540" level="INFO">Typing text 'Thao2702@' into text field '//div//input[@type='password']'.</msg>
+<msg time="2025-04-17T00:20:59.391893" level="INFO">Typing text 'Thao2702@' into text field '//div//input[@type='password']'.</msg>
 <arg>${Password_Locator}</arg>
 <arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T00:16:48.783540" elapsed="0.113026"/>
+<status status="PASS" start="2025-04-17T00:20:59.391893" elapsed="0.176040"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:48.897565" level="INFO">Clicking button '(//div//button)[1]'.</msg>
+<msg time="2025-04-17T00:20:59.568935" level="INFO">Clicking button '(//div//button)[1]'.</msg>
 <arg>${Button_SignIn}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T00:16:48.897565" elapsed="0.218051"/>
+<status status="PASS" start="2025-04-17T00:20:59.568935" elapsed="0.153033"/>
 </kw>
 <arg>thaontt@gmail.com</arg>
 <arg>Thao2702@</arg>
-<status status="PASS" start="2025-04-17T00:16:48.220415" elapsed="0.895201"/>
+<status status="PASS" start="2025-04-17T00:20:58.260640" elapsed="1.461328"/>
 </kw>
-<status status="PASS" start="2025-04-17T00:16:46.120961" elapsed="2.994655"/>
+<status status="PASS" start="2025-04-17T00:20:55.568036" elapsed="4.153932"/>
 </kw>
 <test id="s1-t1" name="View a list of successful orders when users have purchased" line="13">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Button_close_alert}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T00:16:49.117614" elapsed="0.309073"/>
+<status status="PASS" start="2025-04-17T00:20:59.723969" elapsed="1.024228"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:49.427686" level="INFO">Clicking element '//button[@aria-label='close']'.</msg>
+<msg time="2025-04-17T00:21:00.760200" level="INFO">Clicking element '//button[@aria-label='close']'.</msg>
 <arg>${Button_close_alert}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T00:16:49.427686" elapsed="0.168035"/>
+<status status="PASS" start="2025-04-17T00:21:00.759200" elapsed="0.249058"/>
 </kw>
 <kw name="Go to Account information" owner="Utils">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Avt}</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T00:16:49.596721" elapsed="0.029007"/>
+<status status="PASS" start="2025-04-17T00:21:01.009257" elapsed="0.027010"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-17T00:16:52.626049" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-04-17T00:21:04.037953" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-17T00:16:49.625728" elapsed="3.000321"/>
+<status status="PASS" start="2025-04-17T00:21:01.036267" elapsed="3.001686"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:52.626049" level="INFO">Clicking element '(//div[@class='Header_header__actions-group__sLYqM'])[1]'.</msg>
+<msg time="2025-04-17T00:21:04.038953" level="INFO">Clicking element '(//div[@class='Header_header__actions-group__sLYqM'])[1]'.</msg>
 <arg>${Avt}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T00:16:52.626049" elapsed="0.071016"/>
+<status status="PASS" start="2025-04-17T00:21:04.037953" elapsed="0.525119"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Button_Personal_Page}</arg>
 <arg>${TimeOut}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T00:16:52.698064" elapsed="0.029549"/>
+<status status="PASS" start="2025-04-17T00:21:04.564073" elapsed="0.092019"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:52.728072" level="INFO">Clicking element '//a[@href='/auth/profile']//li[@class='Header_header__user-option__EGhmN']'.</msg>
+<msg time="2025-04-17T00:21:04.656092" level="INFO">Clicking element '//a[@href='/auth/profile']//li[@class='Header_header__user-option__EGhmN']'.</msg>
 <arg>${Button_Personal Page}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T00:16:52.728072" elapsed="0.161038"/>
+<status status="PASS" start="2025-04-17T00:21:04.656092" elapsed="2.481555"/>
 </kw>
-<status status="PASS" start="2025-04-17T00:16:49.595721" elapsed="3.293389"/>
+<status status="PASS" start="2025-04-17T00:21:01.009257" elapsed="6.129390"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${Button_Đơn_Hang}</arg>
 <arg>${timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T00:16:52.890109" elapsed="0.039008"/>
+<status status="PASS" start="2025-04-17T00:21:07.143648" elapsed="0.906205"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-17T00:16:54.930585" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-17T00:21:10.052305" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-17T00:16:52.930117" elapsed="2.000468"/>
+<status status="PASS" start="2025-04-17T00:21:08.051851" elapsed="2.001450"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:16:54.931568" level="INFO">Clicking element '(//button//p[contains(text(),'Đơn hàng')])[2]'.</msg>
+<msg time="2025-04-17T00:21:10.055303" level="INFO">Clicking element '(//button//p[contains(text(),'Đơn hàng')])[2]'.</msg>
 <arg>${Button_Đơn_Hang}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T00:16:54.931568" elapsed="0.166038"/>
+<status status="PASS" start="2025-04-17T00:21:10.054304" elapsed="0.214044"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2025-04-17T00:17:10.524105" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-17T00:17:10.525106" level="FAIL">Element '//div[contains(text(), 'Hoàn thành (7)')]' not visible after 15 seconds.</msg>
+<msg time="2025-04-17T00:21:22.195548" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E5395355+78597]
+	GetHandleVerifier [0x00007FF7E53953B0+78688]
+	(No symbol) [0x00007FF7E5148FDC]
+	(No symbol) [0x00007FF7E518F51F]
+	(No symbol) [0x00007FF7E51C6FB2]
+	(No symbol) [0x00007FF7E51C19CC]
+	(No symbol) [0x00007FF7E51C0AA9]
+	(No symbol) [0x00007FF7E5115AB5]
+	GetHandleVerifier [0x00007FF7E563EF0D+2870973]
+	GetHandleVerifier [0x00007FF7E56396B8+2848360]
+	GetHandleVerifier [0x00007FF7E5656993+2967875]
+	GetHandleVerifier [0x00007FF7E53B019A+188746]
+	GetHandleVerifier [0x00007FF7E53B847F+222255]
+	(No symbol) [0x00007FF7E5114B28]
+	GetHandleVerifier [0x00007FF7E5740688+3925560]
+	BaseThreadInitThunk [0x00007FFAB6D57374+20]
+	RtlUserThreadStart [0x00007FFAB8ABCC91+33]
+</msg>
+<msg time="2025-04-17T00:21:22.198548" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E5395355+78597]
+	GetHandleVerifier [0x00007FF7E53953B0+78688]
+	(No symbol) [0x00007FF7E51491AA]
+	(No symbol) [0x00007FF7E5134EF5]
+	(No symbol) [0x00007FF7E5159F04]
+	(No symbol) [0x00007FF7E51CED0F]
+	(No symbol) [0x00007FF7E51EEBB2]
+	(No symbol) [0x00007FF7E51C6EC3]
+	(No symbol) [0x00007FF7E51903F8]
+	(No symbol) [0x00007FF7E5191163]
+	GetHandleVerifier [0x00007FF7E563EF0D+2870973]
+	GetHandleVerifier [0x00007FF7E56396B8+2848360]
+	GetHandleVerifier [0x00007FF7E5656993+2967875]
+	GetHandleVerifier [0x00007FF7E53B019A+188746]
+	GetHandleVerifier [0x00007FF7E53B847F+222255]
+	GetHandleVerifier [0x00007FF7E539D2D4+111236]
+	GetHandleVerifier [0x00007FF7E539D482+111666]
+	GetHandleVerifier [0x00007FF7E53835A9+5465]
+	BaseThreadInitThunk [0x00007FFAB6D57374+20]
+	RtlUserThreadStart [0x00007FFAB8ABCC91+33]
+</msg>
 <arg>${DonMua_Status_HoanThanh}</arg>
 <arg>15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-04-17T00:16:55.123610" elapsed="15.407497">Element '//div[contains(text(), 'Hoàn thành (7)')]' not visible after 15 seconds.</status>
+<status status="FAIL" start="2025-04-17T00:21:10.269350" elapsed="11.945202">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E5395355+78597]
+	GetHandleVerifier [0x00007FF7E53953B0+78688]
+	(No symbol) [0x00007FF7E51491AA]
+	(No symbol) [0x00007FF7E5134EF5]
+	(No symbol) [0x00007FF7E5159F04]
+	(No symbol) [0x00007FF7E51CED0F]
+	(No symbol) [0x00007FF7E51EEBB2]
+	(No symbol) [0x00007FF7E51C6EC3]
+	(No symbol) [0x00007FF7E51903F8]
+	(No symbol) [0x00007FF7E5191163]
+	GetHandleVerifier [0x00007FF7E563EF0D+2870973]
+	GetHandleVerifier [0x00007FF7E56396B8+2848360]
+	GetHandleVerifier [0x00007FF7E5656993+2967875]
+	GetHandleVerifier [0x00007FF7E53B019A+188746]
+	GetHandleVerifier [0x00007FF7E53B847F+222255]
+	GetHandleVerifier [0x00007FF7E539D2D4+111236]
+	GetHandleVerifier [0x00007FF7E539D482+111666]
+	GetHandleVerifier [0x00007FF7E53835A9+5465]
+	BaseThreadInitThunk [0x00007FFAB6D57374+20]
+	RtlUserThreadStart [0x00007FFAB8ABCC91+33]
+</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${DonMua_Status_HoanThanh}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-17T00:17:10.531107" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-04-17T00:21:22.214552" elapsed="0.001001"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <var>${status}</var>
@@ -193,30 +257,54 @@ Without any arguments.</msg>
 <arg>${List_DonHang}</arg>
 <arg>${TimeOut}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" start="2025-04-17T00:17:10.532106" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-04-17T00:21:22.215553" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="'${status}' == '${True}'">
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Pass case View a list of successful orders when users have purchased</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2025-04-17T00:17:10.533107" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-04-17T00:21:22.216554" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-04-17T00:17:10.533107" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-04-17T00:21:22.216554" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Skip" owner="BuiltIn">
 <arg>User chưa có đơn nào mua hàng thành công</arg>
 <doc>Skips the rest of the current test.</doc>
-<status status="NOT RUN" start="2025-04-17T00:17:10.534107" elapsed="0.000000"/>
+<status status="NOT RUN" start="2025-04-17T00:21:22.216554" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2025-04-17T00:17:10.533107" elapsed="0.001000"/>
+<status status="NOT RUN" start="2025-04-17T00:21:22.216554" elapsed="0.000000"/>
 </branch>
-<status status="NOT RUN" start="2025-04-17T00:17:10.533107" elapsed="0.001000"/>
+<status status="NOT RUN" start="2025-04-17T00:21:22.216554" elapsed="0.001000"/>
 </if>
-<status status="FAIL" start="2025-04-17T00:16:49.116614" elapsed="21.417493">Element '//div[contains(text(), 'Hoàn thành (7)')]' not visible after 15 seconds.</status>
+<status status="FAIL" start="2025-04-17T00:20:59.721968" elapsed="22.495586">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E5395355+78597]
+	GetHandleVerifier [0x00007FF7E53953B0+78688]
+	(No symbol) [0x00007FF7E51491AA]
+	(No symbol) [0x00007FF7E5134EF5]
+	(No symbol) [0x00007FF7E5159F04]
+	(No symbol) [0x00007FF7E51CED0F]
+	(No symbol) [0x00007FF7E51EEBB2]
+	(No symbol) [0x00007FF7E51C6EC3]
+	(No symbol) [0x00007FF7E51903F8]
+	(No symbol) [0x00007FF7E5191163]
+	GetHandleVerifier [0x00007FF7E563EF0D+2870973]
+	GetHandleVerifier [0x00007FF7E56396B8+2848360]
+	GetHandleVerifier [0x00007FF7E5656993+2967875]
+	GetHandleVerifier [0x00007FF7E53B019A+188746]
+	GetHandleVerifier [0x00007FF7E53B847F+222255]
+	GetHandleVerifier [0x00007FF7E539D2D4+111236]
+	GetHandleVerifier [0x00007FF7E539D482+111666]
+	GetHandleVerifier [0x00007FF7E53835A9+5465]
+	BaseThreadInitThunk [0x00007FFAB6D57374+20]
+	RtlUserThreadStart [0x00007FFAB8ABCC91+33]
+</status>
 </test>
-<status status="FAIL" start="2025-04-17T00:16:45.777892" elapsed="24.759215"/>
+<status status="FAIL" start="2025-04-17T00:20:55.116936" elapsed="27.103619"/>
 </suite>
 <statistics>
 <total>
@@ -229,5 +317,25 @@ Without any arguments.</msg>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-04-17T00:21:22.195548" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E5395355+78597]
+	GetHandleVerifier [0x00007FF7E53953B0+78688]
+	(No symbol) [0x00007FF7E5148FDC]
+	(No symbol) [0x00007FF7E518F51F]
+	(No symbol) [0x00007FF7E51C6FB2]
+	(No symbol) [0x00007FF7E51C19CC]
+	(No symbol) [0x00007FF7E51C0AA9]
+	(No symbol) [0x00007FF7E5115AB5]
+	GetHandleVerifier [0x00007FF7E563EF0D+2870973]
+	GetHandleVerifier [0x00007FF7E56396B8+2848360]
+	GetHandleVerifier [0x00007FF7E5656993+2967875]
+	GetHandleVerifier [0x00007FF7E53B019A+188746]
+	GetHandleVerifier [0x00007FF7E53B847F+222255]
+	(No symbol) [0x00007FF7E5114B28]
+	GetHandleVerifier [0x00007FF7E5740688+3925560]
+	BaseThreadInitThunk [0x00007FFAB6D57374+20]
+	RtlUserThreadStart [0x00007FFAB8ABCC91+33]
+</msg>
 </errors>
 </robot>

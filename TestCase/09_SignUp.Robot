@@ -3,7 +3,7 @@ Resource    ../Resource/SignUp.resource
 Resource    ../Resource/SignIn.resource
 Resource    ../Resource/Library.resource
 Resource    ../Resource/Utils.resource
-Suite Setup    Open Brower SignUp SignIn
+Suite Setup    Open Browser   ${URL}    ${BROWSER}
 
 
 *** Variables ***
