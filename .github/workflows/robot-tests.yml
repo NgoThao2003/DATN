@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Robot Framework tests
         run: |
-          robot --outputdir /TestReport ./TestCase/01_SignIn.robot
+          robot --outputdir ./TestReport ./TestCase/01_SignIn.robot
 
       - name: Check folder structure
         run: |
