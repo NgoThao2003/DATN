@@ -1,6 +1,0 @@
-[17548:652:0506/204842.648:INFO:chrome_browser_cloud_management_controller.cc(202)] No machine level policy manager exists.
-[804:17152:0506/204842.808:ERROR:direct_composition_support.cc(1126)] QueryInterface to IDCompositionDevice4 failed: No such interface supported (0x80004002)
-[17548:652:0506/204844.304:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://hauifood.vn/auth/login (0)
-[17548:652:0506/204844.393:INFO:CONSOLE(1)] "Manifest: Line: 1, column: 1, Syntax error.", source: https://hauifood.vn/auth/manifest.json (1)
-[18196:16624:0506/204847.787:WARNING:sqlite_persistent_store_backend_base.cc(176)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
-[18196:16624:0506/204847.788:WARNING:sqlite_persistent_store_backend_base.cc(176)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.

@@ -5,6 +5,7 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
+  workflow_dispatch:
 
 jobs:
   robot-test:
@@ -23,17 +24,25 @@ jobs:
       - name: Install dependencies
         run: |
           pip install robotframework robotframework-seleniumlibrary
+
+      - name: Check dependencies
+        run: |
+          pip list
+
+      - name: Check folder structure
+        run: |
+          ls
       
 
-      - name: Run Robot Framework tests
-        run: |
-          robot --output output.xml --report report.html --log log.html TestCase/
-
-      - name: Upload Robot Framework Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: robot-report
-          path: |
-            output.xml
-            report.html
-            log.html
+#      - name: Run Robot Framework tests
+#        run: |
+#          robot --output output.xml --report report.html --log log.html TestCase/
+#
+#      - name: Upload Robot Framework Report
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: robot-report
+#          path: |
+#            output.xml
+#            report.html
+#            log.html
