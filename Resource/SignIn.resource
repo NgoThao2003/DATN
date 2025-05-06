@@ -2,7 +2,7 @@
 Resource   Library.resource
 Resource    Utils.resource
 *** Variables ***
-${BROWSER}   chrome
+${BROWSER}   headlesschrome
 ${URL}  https://hauifood.vn/auth/login
 ${Email_Locator}   //div//input[@type='email']
 ${Password_Locator}     //div//input[@type='password']
