@@ -29,14 +29,15 @@ jobs:
         run: |
           pip list
 
+      - name: Run Robot Framework tests
+        run: |
+          robot --outputdir /TestReport /TestCase/01_SignIn.robot
+
       - name: Check folder structure
         run: |
           ls
-      
 
-#      - name: Run Robot Framework tests
-#        run: |
-#          robot --output output.xml --report report.html --log log.html TestCase/
+
 #
 #      - name: Upload Robot Framework Report
 #        uses: actions/upload-artifact@v4
