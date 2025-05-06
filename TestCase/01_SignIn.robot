@@ -35,7 +35,6 @@ Login failed when entering wrong password
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-
 Login failed when email field is left blank
     [Documentation]    Login with email blank
     wait until element is visible     ${Email_Locator}    3s
@@ -43,6 +42,87 @@ Login failed when email field is left blank
     input text    ${Password_Locator}    thao2702@
     wait until element is visible    ${Message_error_MissEmail}    3s
     Clear Text    ${Password_Locator}
+
+Login failed when the email is missing @
+    [Documentation]    Login with email missing @
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    thaonttgmail.com
+    input text    ${Password_Locator}    thao2702@
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
+
+Login failed when the email is missing name
+    [Documentation]    Login with email missing name
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    @gmail.com
+    input text    ${Password_Locator}    thao2702@
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
+
+Login failed when the email is duplicate @
+    [Documentation]    Login with email missing name
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    thaontt@@gmail.com
+    input text    ${Password_Locator}    thao2702@
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
+
+Login failed when the email is missing domain
+    [Documentation]    Login with email missing name
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    thaontt@
+    input text    ${Password_Locator}    thao2702@
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
+
+Login failed when email is missing domain header
+    [Documentation]    Login with email missing domain header
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    thaontt@
+    input text    ${Password_Locator}    thao2702@com
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
+
+Login failed, email missing domain ending
+    [Documentation]    Login with email missing domain ending
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    thaontt@
+    input text    ${Password_Locator}    thao2702@gmail
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
+
+Login failed when entering email containing special characters
+    [Documentation]    Login with email contain special characters
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    thaontt#$@gmail.com
+    input text    ${Password_Locator}    thao2702@
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
+
+Login failed when the email is missing dot
+    [Documentation]    Login with email missing dot
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    thaontt@gmailcom
+    input text    ${Password_Locator}    thao2702@
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
+
+Login failed when the email is duplicate dot
+    [Documentation]    Login with email duplicate dot
+    wait until element is visible     ${Email_Locator}    3s
+    input text    ${Email_Locator}    thaontt@gmail..com
+    input text    ${Password_Locator}    thao2702@
+    wait until element is visible    ${Message_error_MissEmail}    3s
+    Clear Text     ${Email_Locator}
+    Clear Text      ${Password_Locator}
 
 Login failed when password field is left blank
     [Documentation]    Login with password blank

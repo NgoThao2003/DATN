@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../Resource/SignIn.resource
 Resource    ../Resource/Library.resource
-Resource    ../Resource/Utils.resource
+Resource     ../Resource/Utils.resource
 Suite Setup    Open Browwer And Login
 
 *** Variables ***
@@ -21,3 +21,4 @@ View account information successfully
     Check input have value    ${Input_HoTen}
     Check input have value    ${Input_Email}
     sleep    3s
+

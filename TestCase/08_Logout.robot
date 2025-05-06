@@ -10,7 +10,7 @@ Suite Setup    Open Browwer And Login
 
 *** Test Cases ***
 Logout success
-    wait until element is visible    ${Message_SignIn_Success}    ${TimeOut}
+    wait until element is visible     ${Button_close_alert}    ${TimeOut}
     click element    ${Button_close_alert}
     wait until element is visible    ${Avt}    ${TimeOut}
     click element    ${Avt}

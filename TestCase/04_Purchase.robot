@@ -94,6 +94,7 @@ Purchase failed when phone number not entered
     input text    ${Input_address}    25 ngõ 249 Mai Dịch, Cầu Giấy
     scroll element into view    ${Note}
     input text    ${Note}    Giao tận cửa
+    clear text    ${Input_sđt}
     wait until element is visible    ${Message_error_sđt}
     wait until element is visible    ${Button_Pay_Disable}    ${TimeOut}
     scroll element into view    ${Button_Pay_Disable}

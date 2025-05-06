@@ -17,19 +17,22 @@ ${Button_close_card_2}   //div//div//button[@class='Cart_cart__close__d9rmd']
 ${Card_product_detail}     //div[@class='cart__products-list']
 
 #Logout
-${Message_SignIn_Success}  //div[contains(text(), 'Đăng nhập thành công')]
+${Message_SignIn_Success}   //div//div[contains(text(), 'Đăng nhập thành công')]
 ${Avt}   (//div[@class='Header_header__actions-group__sLYqM'])[1]
 ${Button_Logout}   (//li[@class='Header_header__user-option__EGhmN'])[2]
 ${Message_Logout_Success}  //div//div[contains(text(), 'Đăng xuất thành công')]
-${Button_close_alert}    //button[@aria-label='close']
+${Button_close_alert}    //div//button[@aria-label='close']
 
 #ViewAccountInformation
 ${Button_Personal_Page}   //a[@href='/auth/profile']//li[@class='Header_header__user-option__EGhmN']
 ${Input_HoTen}    //input[@placeholder='Họ tên']
 ${Input_Email}    //input[@placeholder='Email']
+${Select_GioiTinh}    //div[@class='Profile_gender-container__JTA0y']
+${Button_Cap_Nhat}    //button[@class='Button_wrapper__6uHX0 Button_primary__CHwmz']
+${Button_Huy}    //button[@class='Button_wrapper__6uHX0 Button_primary__CHwmz Button_cancel__M6zS9']
 
 #View order list
-${DonMua_Status_HoanThanh}     //div[contains(text(), 'Hoàn thành (7)')]
+${DonMua_Status_HoanThanh}     //div[@class='HistoryOder_order-status__item__AHlZi'][4]
 ${List_DonHang}   //div[@class='HistoryOderItem_item-wrapper__JlZ8U']
 
 #Purchase

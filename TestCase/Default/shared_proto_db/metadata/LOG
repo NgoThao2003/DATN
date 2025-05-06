@@ -1,2 +1,3 @@
-2025/04/17-00:20:57.473 44a0 Creating DB D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\Default\shared_proto_db\metadata since it was missing.
-2025/04/17-00:20:57.486 44a0 Reusing MANIFEST D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\Default\shared_proto_db\metadata/MANIFEST-000001
+2025/05/06-20:48:42.904 2c4c Reusing MANIFEST D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\Default\shared_proto_db\metadata/MANIFEST-000001
+2025/05/06-20:48:42.904 2c4c Recovering log #3
+2025/05/06-20:48:42.905 2c4c Reusing old log D:\Downloads\Đồ Án Tốt Nghiệp_Thảo\HAUI_Food\TestCase\Default\shared_proto_db\metadata/000003.log 
