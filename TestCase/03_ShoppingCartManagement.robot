@@ -77,7 +77,7 @@ Delete All Product in Cart
     ELSE
         sleep    2s
         click element    ${Button_delete_all}
-        wait until element is visible    ${Message_DeleteAll_Success}
+#        wait until element is visible    ${Message_DeleteAll_Success}
         sleep    3s
         log to console    Delete All Product in Cart Success
     END

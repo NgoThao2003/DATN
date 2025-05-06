@@ -2,7 +2,7 @@
 Resource    ../Resource/SignIn.resource
 Resource    ../Resource/Library.resource
 Resource    ../Resource/Utils.resource
-Suite Setup    Open Browser   ${URL}    ${BROWSER}
+Suite Setup    Open Browser   ${URL}    headlesschrome
 
 
 *** Variables ***

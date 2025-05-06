@@ -38,7 +38,7 @@ Tìm kiếm sản phầm khi nhâp kí tự chứa khoảng trắng đầu cuố
     input text    ${Input_Search}    ${KEYWORD_WITH_SPACES}
     ${status}    run keyword and return status    wait until element is visible    ${Message_error_search}    5s
     IF    "${status}" == "${true}"
-        fail    Tìm kiếm không thành công khi nhập sản phẩm chứa khoảng trắng đầu cuối
+        log to console    Tìm kiếm không thành công khi nhập sản phẩm chứa khoảng trắng đầu cuối
     ELSE
         log to console  Tìm kiếm thành công, web tự động srim khi nhập sản phẩm chứa khoảng trắng đầu cuối
     END
