@@ -1,103 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-05-06T21:48:21.994329" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-05-06T23:54:21.404756" rpa="false" schemaversion="5">
 <suite id="s1" name="07 ViewOrderList" source="D:\Downloads\DATNThao\HAUI_Food\TestCase\07_ViewOrderList.robot">
 <kw name="Open Browwer And Login" owner="SignIn" type="SETUP">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-05-06T21:48:22.418424" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001C4346056A0&gt;</msg>
+<msg time="2025-05-06T23:54:21.686828" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002B0FD4D55B0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-05-06T21:48:22.417424" elapsed="0.001000"/>
+<status status="PASS" start="2025-05-06T23:54:21.686828" elapsed="0.000000"/>
 </kw>
 <kw name="Get Environment Variable" owner="OperatingSystem">
-<msg time="2025-05-06T21:48:22.418424" level="INFO">${is_ci} = False</msg>
+<msg time="2025-05-06T23:54:21.687834" level="INFO">${is_ci} = False</msg>
 <var>${is_ci}</var>
 <arg>CI</arg>
 <arg>False</arg>
 <doc>Returns the value of an environment variable with the given name.</doc>
-<status status="PASS" start="2025-05-06T21:48:22.418424" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-06T23:54:21.686828" elapsed="0.001006"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-05-06T23:54:21.687834" level="INFO">${chrome_args} = ['--no-sandbox', '--disable-dev-shm-usage']</msg>
+<var>${chrome_args}</var>
+<arg>--no-sandbox</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-05-06T23:54:21.687834" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${is_ci}'=='true'</arg>
-<arg>Call Method</arg>
-<arg>${options}</arg>
-<arg>add_argument</arg>
+<arg>Append To List</arg>
+<arg>${chrome_args}</arg>
 <arg>--headless</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2025-05-06T21:48:22.418424" elapsed="0.000999"/>
+<status status="PASS" start="2025-05-06T23:54:21.687834" elapsed="0.000000"/>
 </kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--no-sandbox</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-05-06T21:48:22.419423" elapsed="0.001001"/>
-</kw>
-<kw name="Call Method" owner="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>--disable-dev-shm-usage</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-05-06T21:48:22.420424" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-06T21:48:22.422424" level="FAIL">Variable '${user_dir}' not found.</msg>
-<arg>${user_dir}</arg>
-<arg>D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="FAIL" start="2025-05-06T21:48:22.420424" elapsed="0.002000">Variable '${user_dir}' not found.</status>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2025-05-06T23:54:21.687834" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Append To List" owner="Collections">
+<arg>${chrome_args}</arg>
+<arg>--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-05-06T23:54:21.688820" elapsed="0.000000"/>
 </kw>
 <arg>'${is_ci}'=='true'</arg>
-<arg>Set Variable</arg>
-<arg>${user_dir}</arg>
-<arg>/tmp/robot-user-data</arg>
-<arg>ELSE</arg>
-<arg>Set Variable</arg>
-<arg>${user_dir}</arg>
-<arg>D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="FAIL" start="2025-05-06T21:48:22.420424" elapsed="0.002000">Variable '${user_dir}' not found.</status>
+<arg>Append To List</arg>
+<arg>${chrome_args}</arg>
+<arg>--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase</arg>
+<doc>*DEPRECATED since RF 5.0. Use Native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2025-05-06T23:54:21.687834" elapsed="0.000986"/>
 </kw>
+<for flavor="IN">
+<iter>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
-<arg>--user-data-dir=${user_dir}</arg>
+<arg>${arg}</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="NOT RUN" start="2025-05-06T21:48:22.422424" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-06T23:54:21.689837" elapsed="0.000000"/>
 </kw>
+<var name="${arg}">--no-sandbox</var>
+<status status="PASS" start="2025-05-06T23:54:21.688820" elapsed="0.001017"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-06T23:54:21.689837" elapsed="0.000997"/>
+</kw>
+<var name="${arg}">--disable-dev-shm-usage</var>
+<status status="PASS" start="2025-05-06T23:54:21.689837" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>${arg}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-05-06T23:54:21.690834" elapsed="0.000000"/>
+</kw>
+<var name="${arg}">--user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase</var>
+<status status="PASS" start="2025-05-06T23:54:21.690834" elapsed="0.000000"/>
+</iter>
+<var>${arg}</var>
+<value>@{chrome_args}</value>
+<status status="PASS" start="2025-05-06T23:54:21.688820" elapsed="0.002014"/>
+</for>
 <kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:21.691834" level="INFO">Opening browser 'headlesschrome' to base url 'https://hauifood.vn/auth/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="NOT RUN" start="2025-05-06T21:48:22.422424" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-06T23:54:21.690834" elapsed="1.884745"/>
 </kw>
 <kw name="Login Web Haui Food" owner="SignIn">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-06T23:54:23.576579" elapsed="0.028007"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:23.604586" level="INFO">Executing JavaScript:
+document.body.style.zoom = '0.8';
+Without any arguments.</msg>
+<arg>document.body.style.zoom = '0.8';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-05-06T23:54:23.604586" elapsed="0.009002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Email_Locator}</arg>
+<arg>3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T23:54:23.613588" elapsed="0.232052"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:23.846640" level="INFO">Typing text 'thaontt@gmail.com' into text field '//div//input[@type='email']'.</msg>
+<arg>${Email_Locator}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T23:54:23.845640" elapsed="0.126029"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:23.971669" level="INFO">Typing text 'Thao2702@' into text field '//div//input[@type='password']'.</msg>
+<arg>${Password_Locator}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T23:54:23.971669" elapsed="0.091019"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:24.063690" level="INFO">Clicking button '(//div//button)[1]'.</msg>
+<arg>${Button_SignIn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T23:54:24.063690" elapsed="0.203047"/>
+</kw>
 <arg>thaontt@gmail.com</arg>
 <arg>Thao2702@</arg>
-<status status="NOT RUN" start="2025-05-06T21:48:22.423425" elapsed="0.000000"/>
+<status status="PASS" start="2025-05-06T23:54:23.576579" elapsed="0.691157"/>
 </kw>
-<status status="FAIL" start="2025-05-06T21:48:22.416424" elapsed="0.007001">Variable '${user_dir}' not found.</status>
+<status status="PASS" start="2025-05-06T23:54:21.685827" elapsed="2.581909"/>
 </kw>
 <test id="s1-t1" name="View a list of successful orders when users have purchased" line="13">
-<status status="FAIL" start="2025-05-06T21:48:22.423425" elapsed="0.001002">Parent suite setup failed:
-Variable '${user_dir}' not found.</status>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_close_alert}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T23:54:24.268736" elapsed="0.348080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:24.617817" level="INFO">Clicking element '//div//button[@aria-label='close']'.</msg>
+<arg>${Button_close_alert}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T23:54:24.616816" elapsed="0.203045"/>
+</kw>
+<kw name="Go to Account information" owner="Utils">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Avt}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T23:54:24.820861" elapsed="0.035006"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-06T23:54:27.856508" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-06T23:54:24.855867" elapsed="3.000641"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:27.856508" level="INFO">Clicking element '(//div[@class='Header_header__actions-group__sLYqM'])[1]'.</msg>
+<arg>${Avt}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T23:54:27.856508" elapsed="0.057008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Personal_Page}</arg>
+<arg>${TimeOut}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T23:54:27.913516" elapsed="0.017002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:27.931519" level="INFO">Clicking element '//a[@href='/auth/profile']//li[@class='Header_header__user-option__EGhmN']'.</msg>
+<arg>${Button_Personal Page}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T23:54:27.930518" elapsed="0.113026"/>
+</kw>
+<status status="PASS" start="2025-05-06T23:54:24.820861" elapsed="3.222683"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Button_Đơn_Hang}</arg>
+<arg>${timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T23:54:28.060547" elapsed="0.058014"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-06T23:54:30.120505" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-06T23:54:28.118561" elapsed="2.001944"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:30.121500" level="INFO">Clicking element '(//button//p[contains(text(),'Đơn hàng')])[2]'.</msg>
+<arg>${Button_Đơn_Hang}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T23:54:30.121500" elapsed="0.061998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DonMua_Status_HoanThanh}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T23:54:30.183498" elapsed="0.021003"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-06T23:54:30.204501" level="INFO">Clicking element '//div[@class='HistoryOder_order-status__item__AHlZi'][4]'.</msg>
+<arg>${DonMua_Status_HoanThanh}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T23:54:30.204501" elapsed="0.064015"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${List_DonHang}</arg>
+<arg>${TimeOut}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-06T23:54:30.268516" elapsed="0.642181"/>
+</kw>
+<msg time="2025-05-06T23:54:30.910697" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>wait until element is visible</arg>
+<arg>${List_DonHang}</arg>
+<arg>${TimeOut}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-06T23:54:30.268516" elapsed="0.642181"/>
+</kw>
+<if>
+<branch type="IF" condition="'${status}' == '${True}'">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Pass case View a list of successful orders when users have purchased</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-06T23:54:30.911697" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-06T23:54:30.911697" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Skip" owner="BuiltIn">
+<arg>User chưa có đơn nào mua hàng thành công</arg>
+<doc>Skips the rest of the current test.</doc>
+<status status="NOT RUN" start="2025-05-06T23:54:30.912698" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-05-06T23:54:30.911697" elapsed="0.001001"/>
+</branch>
+<status status="PASS" start="2025-05-06T23:54:30.911697" elapsed="0.001001"/>
+</if>
+<status status="PASS" start="2025-05-06T23:54:24.267736" elapsed="6.644962"/>
 </test>
-<status status="FAIL" start="2025-05-06T21:48:21.997328" elapsed="0.428097">Suite setup failed:
-Variable '${user_dir}' not found.</status>
+<status status="PASS" start="2025-05-06T23:54:21.406758" elapsed="9.506940"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="07 ViewOrderList">07 ViewOrderList</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="07 ViewOrderList">07 ViewOrderList</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-05-06T23:54:21.687834" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
 </errors>
 </robot>
