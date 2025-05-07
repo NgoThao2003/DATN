@@ -52,5 +52,3 @@ Tìm kiếm sản phẩm bằng bộ lọc theo danh mục
     click element    ${CheckBox_banhmi}
     sleep    3s
     Shoule Be Equal Name Product    ${List_Name_Product_filter}
-
-

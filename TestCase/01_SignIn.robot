@@ -132,7 +132,6 @@ Login failed when password field is left blank
     wait until element is visible    ${Message_error_MissPassword}    3s
     Clear Text     ${Email_Locator}
 
-
 Login Success when valid fields are entered
     [Documentation]    Login with valid information
     Login Web Haui Food  thaontt@gmail.com  Thao2702@
