@@ -85,6 +85,6 @@ jobs:
         with:
           name: robot-report
           path: |
-            log/output.xml
-            log/report.html
-            log/log.html
+            TestCase/output.xml
+            TestCase/report.html
+            TestCase/log.html
