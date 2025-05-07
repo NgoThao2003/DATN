@@ -20,6 +20,3 @@ SignUp Web Haui Food
     input text    ${Password_Locator}    ${Password}
     click button    ${Button_SignUp}
 
-#Open Browwer And SignUp
-#   Open Browser   ${URL}    ${BROWSER}    options=--headless,--no-sandbox,--disable-dev-shm-usage
-#   SignUp Web Haui Food   thanhthaongo845@gmail.com    Thao2702@

@@ -19,14 +19,7 @@ Login Web Haui Food
     input text    ${Password_Locator}    ${Password}
     click button    ${Button_SignIn}
 
-#Open Browwer And Login
-#   Open Browser   ${URL}    ${BROWSER}    options=--headless,--no-sandbox,--disable-dev-shm-usage
-#   Login Web Haui Food    thaontt@gmail.com    Thao2702@
-
-
-
 Open Browwer And Login
-
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
     ${is_ci}=      Get Environment Variable    CI    False
 
@@ -37,7 +30,7 @@ Open Browwer And Login
     Run Keyword If    '${is_ci}'=='true'    Append To List    ${chrome_args}    --headless
 
     # Thêm user profile nếu chạy local
-    Run Keyword Unless    '${is_ci}'=='true'    Append To List    ${chrome_args}    --user-data-dir=D:/Downloads/Đồ Án Tốt Nghiệp_Thảo/HAUI_Food/TestCase
+    Run Keyword Unless    '${is_ci}'=='true'    Append To List    ${chrome_args}    --user-data-dir=D:/Downloads/DATNThao/HAUI_Food/TestCase
 
     # Thêm tất cả argument vào ChromeOptions
     FOR    ${arg}    IN    @{chrome_args}
@@ -46,17 +39,3 @@ Open Browwer And Login
 
     Open Browser    ${URL}    ${BROWSER}    options=${options}
     Login Web Haui Food    thaontt@gmail.com    Thao2702@
-
-
-
-
-#    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
-#    ${is_ci}=    Get Environment Variable    CI    False
-#    Run Keyword If    '${is_ci}'=='true'    Call Method    ${options}    add_argument    --headless
-#    Call Method    ${options}    add_argument    --no-sandbox
-#    Call Method    ${options}    add_argument    --disable-dev-shm-usage
-#    # Nếu cần dùng profile có sẵn:
-#     ${arg}=    Evaluate    "--user-data-dir=D:/Downloads/DATNThao/HAUI_Food/TestCase"
-#    Call Method    ${options}    add_argument    ${arg}
-#    Open Browser   ${URL}    ${BROWSER}    #options=${options}
-#    Login Web Haui Food    thaontt@gmail.com    Thao2702@
