@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Robot Framework tests
         run: |
-          robot --outputdir ./TestCase ./TestCase/
+          robot --outputdir  /TestCase ./TestCase/
 
       - name: Check folder structure
         run: |
@@ -47,19 +47,19 @@ jobs:
             TestCase/report.html
             TestCase/log.html
 
-      - name: Send Email with Report
-        if: always()
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.MAIL_THAO }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: Robot Test Report
-          to: thanhthaongo845@gmail.com
-          from: GitHub Actions <${{ secrets.MAIL_THAO }}>
-          secure: true
-          attachments: |
-            TestCase/log.html
-            TestCase/report.html
-            TestCase/output.xml
+#      - name: Send Email with Report
+#        if: always()
+#        uses: dawidd6/action-send-mail@v3
+#        with:
+#          server_address: smtp.gmail.com
+#          server_port: 465
+#          username: ${{ secrets.MAIL_THAO }}
+#          password: ${{ secrets.MAIL_PASSWORD }}
+#          subject: Robot Test Report
+#          to: thanhthaongo845@gmail.com
+#          from: GitHub Actions <${{ secrets.MAIL_THAO }}>
+#          secure: true
+#          attachments: |
+#            TestCase/log.html
+#            TestCase/report.html
+#            TestCase/output.xml

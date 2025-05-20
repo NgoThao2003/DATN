@@ -100,7 +100,7 @@ Purchase failed when phone number not entered
     scroll element into view    ${Button_Pay_Disable}
     click element    ${Logo}
     sleep    2s
-#
+
 Purchase failed when address not entered
     Product add card
     wait until element is visible    ${Button_card}    ${timeout}

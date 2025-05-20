@@ -21,4 +21,3 @@ View account information successfully
     Check input have value    ${Input_HoTen}
     Check input have value    ${Input_Email}
     sleep    3s
-

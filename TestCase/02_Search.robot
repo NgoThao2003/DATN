@@ -9,7 +9,7 @@ Suite Setup    Open Browwer And Login
 ${KEYWORD_WITH_SPACES}     ${SPACE*5}Cơm heo quay${SPACE*10}
 ${KEYWORD_FULLSPACES}    ${SPACE*5}
 ${Button_view_all_products}    //div//a//p[contains(text(), 'Xem tất cả sản phẩm')]
-${CheckBox_banhmi}    (//div[@class='ProductPage_filter-item__-KdCI']//input[@type='checkbox'])[12]
+${CheckBox_suatuoi}    (//div[@class='ProductPage_filter-item__-KdCI']//input[@type='checkbox'])[5]
 
 *** Keywords ***
 
@@ -23,9 +23,20 @@ Product search successful enter approximate product name   #Nhập gần đúng
 
 Product search fails when product does not exist
     wait until element is visible    ${Input_Search}    ${TimeOut}
-    input text    ${Input_Search}    Bánh Mỳ
+    input text    ${Input_Search}    Bánh Pía
     sleep    3s
     wait until element is visible    ${Message_error_search}    ${TimeOut}
+
+Kiểm tra validate khi nhập sai chính tả
+    wait until element is visible    ${Input_Search}    ${TimeOut}
+    input text    ${Input_Search}    Bánh Mỳ
+    sleep    3s
+    ${status}    run keyword and return status    wait until element is visible    ${List_Name_Product}    5s
+    IF    "${status}" == "${true}"
+        log to console    Web đã validate chính tả
+    ELSE
+        fail    Chưa validate khi nhập sai chính tả
+    END
 
 Tìm kiếm sản phẩm không thành công khi nhập kí tự đặc biệt
     wait until element is visible    ${Input_Search}    ${TimeOut}
@@ -38,7 +49,7 @@ Tìm kiếm sản phầm khi nhâp kí tự chứa khoảng trắng đầu cuố
     input text    ${Input_Search}    ${KEYWORD_WITH_SPACES}
     ${status}    run keyword and return status    wait until element is visible    ${Message_error_search}    5s
     IF    "${status}" == "${true}"
-        log to console    Tìm kiếm không thành công khi nhập sản phẩm chứa khoảng trắng đầu cuối
+        fail    Tìm kiếm không thành công khi nhập sản phẩm có chứa khoảng trắng đầu cuối
     ELSE
         log to console  Tìm kiếm thành công, web tự động srim khi nhập sản phẩm chứa khoảng trắng đầu cuối
     END
@@ -48,7 +59,7 @@ Tìm kiếm sản phẩm bằng bộ lọc theo danh mục
     scroll element into view    ${Button_view_all_products}
     sleep    2s
     click element    ${Button_view_all_products}
-    wait until element is visible    ${CheckBox_banhmi}    ${TimeOut}
-    click element    ${CheckBox_banhmi}
+    wait until element is visible    ${CheckBox_suatuoi}    ${TimeOut}
+    click element    ${CheckBox_suatuoi}
     sleep    3s
     Shoule Be Equal Name Product    ${List_Name_Product_filter}

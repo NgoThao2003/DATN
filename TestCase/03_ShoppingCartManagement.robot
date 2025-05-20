@@ -34,6 +34,7 @@ Product added to cart successfully
 
 Thêm sản phẩm với số lượng lớn hơn 1 vào giỏ hàng
     Search success with text detail    Cơm chả cá
+    sleep    4s
     Thêm sản phẩm vào giỏ hàng khi thay đổi số lượng    ${Icon_Plus_Qty}    <
 
 Kiểm tra nhấn nút "- +" khi sản phẩm có quantity bằng 1
@@ -45,6 +46,7 @@ Kiểm tra nhấn nút "- +" khi sản phẩm có quantity bằng 1
 
 
 View cart successfully when cart has products
+   sleep    5s
    Product View Card
 
 Delete One Product in Cart
@@ -77,7 +79,7 @@ Delete All Product in Cart
     ELSE
         sleep    2s
         click element    ${Button_delete_all}
-#        wait until element is visible    ${Message_DeleteAll_Success}
+        wait until element is visible    ${Message_DeleteAll_Success}
         sleep    3s
         log to console    Delete All Product in Cart Success
     END
