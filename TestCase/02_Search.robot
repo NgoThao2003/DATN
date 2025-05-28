@@ -15,13 +15,13 @@ ${CheckBox_suatuoi}    (//div[@class='ProductPage_filter-item__-KdCI']//input[@t
 
 
 *** Test Cases ***
-Product search successful enter correct product name
+Tìm kiếm sản phẩm thành công nhập đúng tên sản phẩm
     Search success with text detail    Cơm heo quay
 
 Product search successful enter approximate product name   #Nhập gần đúng
     Search success
 
-Product search fails when product does not exist
+Tìm kiếm sản phẩm không thành công khi sản phẩm không tồn tại
     wait until element is visible    ${Input_Search}    ${TimeOut}
     input text    ${Input_Search}    Bánh Pía
     sleep    3s

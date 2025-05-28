@@ -45,15 +45,14 @@ Message Pay successful And Go To Home Page
     sleep    1s
 
 *** Test Cases ***
-#Mua hàng thành công, thanh toán khi nhận hàng
-Purchase successful with cash on delivery
+Mua hàng thành công thanh toán khi nhận hàng
     Product add card
     Buy Product
     scroll element into view    ${Button_Order}
     click element    ${Button_Order}
     Message Pay successful And Go To Home Page
 
-Purchase successful when paying with HauiFood e-wallet
+Mua hàng thành công khi thanh toán bằng tiền ví điện tử HauiFood
     Product add card
     Buy Product
     scroll element into view    ${Pay_By_E_Wallet}
@@ -62,8 +61,8 @@ Purchase successful when paying with HauiFood e-wallet
     click element    ${Button_Order}
     Message Pay successful And Go To Home Page
 
-#Không nhập ghi chú
-Purchase successful without entering notes
+
+Mua hàng thành công khi không nhập ghi chú
     Product add card
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}
@@ -81,7 +80,7 @@ Purchase successful without entering notes
     Message Pay successful And Go To Home Page
 
 
-Purchase failed when phone number not entered
+Mua hàng không thành công khi không nhập số điện thoại
     Product add card
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}
@@ -101,7 +100,7 @@ Purchase failed when phone number not entered
     click element    ${Logo}
     sleep    2s
 
-Purchase failed when address not entered
+Mua hàng không thành công khi không nhập địa chỉ
     Product add card
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}

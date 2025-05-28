@@ -8,8 +8,9 @@ Suite Setup    Open Browwer And Login
 ${Button_chinh_sua}    //button[@class='Button_wrapper__6uHX0 Button_primary__CHwmz']//p
 ${Message_Edit_AC_Success}     //div//div[contains(text(), 'Cập nhật thành công.')]
 ${Message_name_required}    //div[contains(text(), 'Vui lòng nhập đầy đủ họ tên.')]
-${Toast_Message_Phone_Require}    //div//div[contains(text(), 'property.phone có ít nhất 10 ký tự')]
+${Toast_Message_Phone_Require}    //div//div[contains(text(), 'Vui lòng nhập đầy đủ số điện thoại')]
 ${Message_phone_fail}    //div[contains(text(), 'Số điện thoại không hợp lệ.')]
+${Message_phone_long}    //div[contains(text(), 'Số điện thoại phải = 10 chữ số')]
 ${Button_Huy}    //button[@class='Button_wrapper__6uHX0 Button_primary__CHwmz Button_cancel__M6zS9']
 *** Keywords ***
 
@@ -62,8 +63,14 @@ Kiểm tra nhập tên = 50 ký tự
 Kiểm tra không nhập số điện thoại
     Input Account Information      NgoThiThanhThao    ${EMPTY}
     click element    ${Button_Cap_Nhat}
-    wait until element is visible    ${Toast_Message_Phone_Require}
-    click element    ${Button_close_alert}
+    ${status}    run keyword and return status    wait until element is visible   ${Toast_Message_Phone_Require}    5s
+    IF    "${status}" == "${true}"
+        log to console  Validate trường hợp bỏ trống số điện thoại thành công
+        click element    ${Button_close_alert}
+    ELSE
+        fail   Không hiển thị message "Vui lòng nhập số điện thoại"
+        click element    ${Button_close_alert}
+    END
 
 Kiểm tra nhập số điện thoại có chứa ký tự chữ
     clear text    ${Input_HoTen}
@@ -81,7 +88,14 @@ Kiểm tra nhập số điện thoại < 10 số
     Input Account Information    NgoThiThanhThao    097734521
     click element    ${Button_Cap_Nhat}
     click element    ${Button_close_alert}
-    wait until element is visible    ${Message_phone_fail}
+    ${status}    run keyword and return status    wait until element is visible   ${Message_phone_long}    5s
+    IF    "${status}" == "${true}"
+        log to console  Message lỗi hiển thị đúng
+        click element    ${Button_close_alert}
+    ELSE
+        fail   Không hiển thị message "Số điện thoại phải = 10 chữ số"
+        click element    ${Button_close_alert}
+    END
 
 Kiểm tra nhập số điện thoại = 10 số
     sleep    3s

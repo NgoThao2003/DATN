@@ -17,8 +17,8 @@ ${TimeOut}    30s
 *** Keywords ***
 
 *** Test Cases ***
-Login failed when entering wrong email
-    [Documentation]    Login with invalid email
+Đăng nhập không thành công khi nhập sai email
+    [Documentation]    Đăng nhập với email sai
     Login Web Haui Food  thaontt453@gmail.com  thao2702@
     click button    ${Button_SignIn}
     wait until element is visible    ${Message_Error_SignIn}    ${TimeOut}
@@ -26,8 +26,8 @@ Login failed when entering wrong email
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when entering wrong password
-    [Documentation]    Login with invalid password
+Đăng nhập không thành công khi nhập sai password
+    [Documentation]    Đăng nhập với password sai
     Login Web Haui Food  thanhthaongo845@gmail.com  thao27076@@
     click button    ${Button_SignIn}
     wait until element is visible    ${Message_Error_SignIn}    5s
@@ -35,16 +35,16 @@ Login failed when entering wrong password
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when email field is left blank
-    [Documentation]    Login with email blank
+Đăng nhập không thành công khi để trống email
+    [Documentation]    Đăng nhập để trống email
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    ${EMPTY}
     input text    ${Password_Locator}    thao2702@
     wait until element is visible    ${Message_error_MissEmail}    3s
     Clear Text    ${Password_Locator}
 
-Login failed when the email is missing @
-    [Documentation]    Login with email missing @
+Đăng nhập không thành công khi nhập email thiếu @
+    [Documentation]    Đăng nhập với email thiếu @
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    thaonttgmail.com
     input text    ${Password_Locator}    thao2702@
@@ -52,8 +52,8 @@ Login failed when the email is missing @
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when the email is missing name
-    [Documentation]    Login with email missing name
+Đăng nhập không thành công khi nhập email thiếu tên
+    [Documentation]    Đăng nhập với email thiếu tên
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    @gmail.com
     input text    ${Password_Locator}    thao2702@
@@ -61,8 +61,8 @@ Login failed when the email is missing name
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when the email is duplicate @
-    [Documentation]    Login with email missing name
+Đăng nhập không thành công khi nhập email duplicate @
+    [Documentation]    Đăng nhập với email duplicate @
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    thaontt@@gmail.com
     input text    ${Password_Locator}    thao2702@
@@ -70,8 +70,8 @@ Login failed when the email is duplicate @
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when the email is missing domain
-    [Documentation]    Login with email missing name
+Đăng nhập không thành công khi nhập email thiếu domain
+    [Documentation]    Đăng nhập với email thiếu domain
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    thaontt@
     input text    ${Password_Locator}    thao2702@
@@ -79,8 +79,8 @@ Login failed when the email is missing domain
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when email is missing domain header
-    [Documentation]    Login with email missing domain header
+Đăng nhập không thành công khi nhập email thiếu domain header
+    [Documentation]     Đăng nhập với email thiếu domain header
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    thaontt@
     input text    ${Password_Locator}    thao2702@com
@@ -88,17 +88,17 @@ Login failed when email is missing domain header
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed, email missing domain ending
-    [Documentation]    Login with email missing domain ending
+Đăng nhập không thành công khi nhập email thiếu phần cuối domain
+    [Documentation]    Đăng nhập với email thiếu phần cuối domain
     wait until element is visible     ${Email_Locator}    3s
-    input text    ${Email_Locator}    thaontt@
-    input text    ${Password_Locator}    thao2702@gmail
+    input text    ${Email_Locator}    thao2702@gmail
+    input text    ${Password_Locator}    thao2702@
     wait until element is visible    ${Message_error_MissEmail}    3s
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when entering email containing special characters
-    [Documentation]    Login with email contain special characters
+Đăng nhập không thành công khi nhập email chứa kí tự đặc biệt
+    [Documentation]    Đăng nhập với email chứa kí tự đặc biệt
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    thaontt#$@gmail.com
     input text    ${Password_Locator}    thao2702@
@@ -106,8 +106,8 @@ Login failed when entering email containing special characters
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when the email is missing dot
-    [Documentation]    Login with email missing dot
+Đăng nhập không thành công khi nhập email thiếu dấu chấm
+    [Documentation]    Đăng nhập với email thiếu dấu chấm
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    thaontt@gmailcom
     input text    ${Password_Locator}    thao2702@
@@ -115,8 +115,8 @@ Login failed when the email is missing dot
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when the email is duplicate dot
-    [Documentation]    Login with email duplicate dot
+Đăng nhập không thành công khi nhập email duplicate dot
+    [Documentation]    Đăng nhập với email duplicate dot
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}    thaontt@gmail..com
     input text    ${Password_Locator}    thao2702@
@@ -124,17 +124,16 @@ Login failed when the email is duplicate dot
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-Login failed when password field is left blank
-    [Documentation]    Login with password blank
+Đăng nhập không thành công khi để trống password
+    [Documentation]    Đăng nhập với password trống
     wait until element is visible     ${Email_Locator}    3s
     input text    ${Email_Locator}  thanhthaongo845@gmail.com
     input text    ${Password_Locator}    ${EMPTY}
     wait until element is visible    ${Message_error_MissPassword}    3s
     Clear Text     ${Email_Locator}
 
-Login Success when valid fields are entered
-    [Documentation]    Login with valid information
+Đăng nhập thành công khi nhập thông tin hợp lệ
+    [Documentation]    Đăng nhập với thông tin hợp lệ
     Login Web Haui Food  thaontt@gmail.com  Thao2702@
-    click button    ${Button_SignIn}
     wait until element is visible    ${Message_SignIn_Success}    3s
     sleep    5s

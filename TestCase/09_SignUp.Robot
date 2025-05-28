@@ -22,7 +22,7 @@ ${TimeOut}    30s
 
 
 *** Test Cases ***
-SignUp failed when entering email already exists
+Đăng ký không thành công khi nhập email đã tồn tại
     [Documentation]    SignUp with email already exists
     ${SignUp_Random}    generate random string    3    1234567890
     wait until element is visible    ${Button_dang_ki}    ${timeout}
@@ -34,7 +34,7 @@ SignUp failed when entering email already exists
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 
-SignUp failed when name field is left blank
+Đăng ký không thành công khi để trống tên
     [Documentation]    SignUp with name blank
     wait until element is visible     ${Email_Locator}    ${TimeOut}
     input text    ${Name_Locator}    ${EMPTY}
@@ -44,7 +44,7 @@ SignUp failed when name field is left blank
     Clear Text    ${Email_Locator}
     Clear Text    ${Password_Locator}
 
-SignUp failed when email field is left blank
+Đăng kí không thành công khi để trống email
     [Documentation]    SignUp with email blank
     wait until element is visible     ${Email_Locator}    ${TimeOut}
     input text    ${Name_Locator}    thaontt_23
@@ -54,7 +54,7 @@ SignUp failed when email field is left blank
     Clear Text    ${Name_Locator}
     Clear Text    ${Password_Locator}
 
-SignUp failed when password field is left blank
+Đăng ký không thành công khi để trống password
     [Documentation]    SignUp with password blank
     wait until element is visible     ${Email_Locator}    ${TimeOut}
     input text    ${Name_Locator}    thaontt_23
@@ -64,7 +64,7 @@ SignUp failed when password field is left blank
     Clear Text    ${Name_Locator}
     Clear Text    ${Email_Locator}
 
-SignUp success when valid fields are entered
+Đăng ký thành công khi nhập hơp tất cả các trường bắt buộc
     [Documentation]    SignUp with valid information
     ${SignUp_Random}    generate random string    3    1234567890
     SignUp Web Haui Food  Thaontt_${SignUp_Random}    thaontt.${SignUp_Random}@gmail.com    thao2702@

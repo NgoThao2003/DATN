@@ -10,7 +10,7 @@ Suite Setup    Open Browwer And Login
 *** Keywords ***
 
 *** Test Cases ***
-View a list of successful orders when users have purchased
+Xem danh sách sản phẩm đã mua thành công khi người dùng đã mua hàng
     wait until element is visible     ${Button_close_alert}
     click element    ${Button_close_alert}
     Go to Account information

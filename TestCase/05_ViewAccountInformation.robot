@@ -13,7 +13,7 @@ Check input have value
     Should Not Be Empty    ${value}
 
 *** Test Cases ***
-View account information successfully
+Xem thông tin tài khoản thành công
     wait until element is visible     ${Button_close_alert}
     click element    ${Button_close_alert}
     Go to Account information

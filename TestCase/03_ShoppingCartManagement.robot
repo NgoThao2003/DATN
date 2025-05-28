@@ -18,7 +18,7 @@ ${Message_DeleteAll_Success}  //div//div[contains(text(), 'Thành công')]
 
 
 *** Test Cases ***
-View cart successfully when cart is empty
+Xem giỏ hàng thành công khi giỏ hàng trống
     wait until element is visible    ${Button_card}   ${TimeOut}
     click element    ${Button_card}
     ${status}    run keyword and return status    wait until element is visible    ${Message_card_emty}    3s
@@ -29,7 +29,7 @@ View cart successfully when cart is empty
         click element    ${Button_close_card}
     END
 
-Product added to cart successfully
+Thêm sản phẩm vào giỏ hàng thành công
     Product Add Card
 
 Thêm sản phẩm với số lượng lớn hơn 1 vào giỏ hàng
@@ -45,11 +45,11 @@ Kiểm tra nhấn nút "- +" khi sản phẩm có quantity bằng 1
     sleep    2s
 
 
-View cart successfully when cart has products
+Xem giỏ hàng thành công khi giỏ hàng có sản phẩm
    sleep    5s
    Product View Card
 
-Delete One Product in Cart
+Xóa một sản phẩm trong giỏ hàng
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}
     ${status}    run keyword and return status    wait until element is visible    ${Button_product_delete}    ${TimeOut}
@@ -68,7 +68,7 @@ Delete One Product in Cart
         log to console    Delete Product success
     END
 
-Delete All Product in Cart
+Xóa tất cả sản phẩm trong giỏ hàng
     Product Add Card
     wait until element is visible    ${Button_card}    ${timeout}
     click element    ${Button_card}
