@@ -6,7 +6,7 @@ ${BROWSER}   chrome
 ${URL}  https://hauifood.vn/auth/login
 ${Email_Locator}   //div//input[@type='email']
 ${Password_Locator}     //div//input[@type='password']
-${Button_SignIn}    (//div//button)[1]
+${Button_SignIn}   //div//button[@type="submit"]
 ${CHROME_ARGS}    --no-sandbox --disable-dev-shm-usage --user-data-dir=D:/Downloads/DATNThao/HAUI_Food/TestCase
 *** Keywords ***
 Login Web Haui Food

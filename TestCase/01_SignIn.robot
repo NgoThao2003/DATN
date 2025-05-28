@@ -22,7 +22,7 @@ ${TimeOut}    30s
     Login Web Haui Food  thaontt453@gmail.com  thao2702@
     click button    ${Button_SignIn}
     wait until element is visible    ${Message_Error_SignIn}    ${TimeOut}
-    click element    ${Button_close_alert}
+#    click element    ${Button_close_alert}
     Clear Text     ${Email_Locator}
     Clear Text      ${Password_Locator}
 

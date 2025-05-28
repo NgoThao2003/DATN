@@ -106,7 +106,7 @@ Kiểm tra nhập số điện thoại = 10 số
 Kiểm tra nhập số điện thoại > 10 số
     sleep    2s
     Input Account Information    NgoThiThanhThao    09773452176575684
-    click element    ${Button_close_alert}
+#    click element    ${Button_close_alert}
     wait until element is visible    ${Message_phone_fail}
     Input Account Information    Thaontt    0977151842
     click element    ${Button_Cap_Nhat}

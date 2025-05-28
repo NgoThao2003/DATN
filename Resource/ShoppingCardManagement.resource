@@ -16,6 +16,7 @@ Product Add Card
     Search success with text detail    Cơm heo quay
     scroll element into view    ${Plus_icon}
     wait until element is visible    ${Plus_icon}    ${timeout}
+    scroll element into view    ${Plus_icon}
     click element    ${Plus_icon}
     wait until element is visible    ${Button_Add_To_Card}     ${timeout}
     click element    ${Button_Add_To_Card}
