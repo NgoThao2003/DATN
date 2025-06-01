@@ -6,7 +6,7 @@ ${BROWSER}   chrome
 ${URL}  https://hauifood.vn/auth/login
 ${Email_Locator}   //div//input[@type='email']
 ${Password_Locator}     //div//input[@type='password']
-${Button_SignIn}   //div//button[@type="submit"]
+${Button_SignIn}   //div//form//div//button[@type="submit"]
 ${CHROME_ARGS}    --no-sandbox --disable-dev-shm-usage --user-data-dir=D:/Downloads/DATNThao/HAUI_Food/TestCase
 *** Keywords ***
 Login Web Haui Food
@@ -29,8 +29,8 @@ Open Browwer And Login
     # Thêm headless nếu chạy CI
     Run Keyword If    '${is_ci}'=='true'    Append To List    ${chrome_args}    --headless
 
-    # Thêm user profile nếu chạy local
-    Run Keyword Unless    '${is_ci}'=='true'    Append To List    ${chrome_args}    --user-data-dir=D:/Downloads/DATNThao/HAUI_Food/TestCase
+    # Thêm user profile tạm nếu chạy local để tránh sinh file hệ thống
+    Run Keyword Unless    '${is_ci}'=='true'    Append To List    ${chrome_args}    --user-data-dir=${EXECDIR}/temp_chrome_profile
 
     # Thêm tất cả argument vào ChromeOptions
     FOR    ${arg}    IN    @{chrome_args}

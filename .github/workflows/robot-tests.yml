@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Robot Framework tests
         run: |
-          robot --outputdir  ./TestCase ./TestCase/
+          robot --outputdir results ./TestCase/
 
       - name: Check folder structure
         run: |
@@ -43,9 +43,9 @@ jobs:
         with:
           name: robot-report
           path: |
-            TestCase/output.xml
-            TestCase/report.html
-            TestCase/log.html
+            results/output.xml
+            results/report.html
+            results/log.html
 
       - name: Send Email with Report
         if: always()
@@ -60,6 +60,6 @@ jobs:
           from: GitHub Actions <${{ secrets.MAIL_THAO }}>
           secure: true
           attachments: |
-            TestCase/log.html
-            TestCase/report.html
-            TestCase/output.xml
+            results/log.html
+            results/report.html
+            results/output.xml

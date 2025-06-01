@@ -9,7 +9,7 @@ ${Message_card_emty}   //div[@class='Cart_cart__empty__ckg8T']
 ${Button_close_card}    //div//button[@class='Cart_cart__close__d9rmd']
 ${Button_products_delete_all}    //button[@class='Cart_cart__products-delete-all__-ZJQU']
 ${Button_product_delete}   (//button[contains(text(), 'Xóa')])[2]
-${Plus_icon}     //div[@class='ProductCard_product__add-cart-btn__YSj69']
+${Plus_icon}      //div//div//div[@class='ProductCard_product__add-cart-btn__YSj69']
 ${Button_Add_To_Card}     //button[@class='Button_wrapper__6uHX0 QuantityDrawer_quantity-drawer__add-btn__DA9c1 Button_primary__CHwmz']
 ${Message_Add_cart_success}    //div//div[contains(text(), 'Thành công')]
 ${Message_delete_product_success}    //div//div[contains(text(), 'Thành công')]
@@ -63,14 +63,3 @@ Go to Account information
     click element    ${Avt}
     wait until element is visible    ${Button_Personal_Page}    ${TimeOut}
     click element    ${Button_Personal Page}
-
-Open Browser Headless Chrome
-    ${options}=    Evaluate    __import__('selenium.webdriver').webdriver.ChromeOptions()
-    Call Method    ${options}    add_argument    --headless
-    Call Method    ${options}    add_argument    --disable-gpu
-    Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    ${rand}=    Evaluate    random.randint(0, 100000)    random
-    ${user_data_dir}=    Set Variable    --user-data-dir=/tmp/chrome-data-${rand}
-    Call Method    ${options}    add_argument    ${user_data_dir}
-    Open Browser    ${URL}    chrome    options=${options}

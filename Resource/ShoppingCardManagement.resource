@@ -11,6 +11,7 @@ ${List_Name_Product}    //div[@class='col-xl-4 col-12']//div[2]//div[@class='Pro
 ${Message_error_search}    //div[@class='NoResult_no-result__content__y3KQf']//h3
 ${Icon_search}    //*[name()='svg' and @class='Banner_search-icon__k9VXG']
 ${Button_close_alert}    //div//button[@aria-label='close']
+${Cart_view}    //div[@class='quantity-drawer__header']
 *** Keywords ***
 Product Add Card
     Search success with text detail    Cơm heo quay
@@ -50,13 +51,19 @@ Thêm sản phẩm vào giỏ hàng khi thay đổi số lượng
     click element    ${Button_change_qty}
     ${Quantity_change}    get text    ${Quantity_Product}
     ${Quantity_change}    Evaluate    int(${Quantity_change})
-    ${is_less}    Evaluate    ${Quantity}${Toan_tu_ss}${Quantity_change}
+    ${is_less}    Evaluate    ${Quantity} ${Toan_tu_ss} ${Quantity_change}
     Should Be True    ${is_less}
     click element    ${Button_Add_To_Card}
     wait until element is visible    ${Message_Add_cart_success}    ${TimeOut}
     wait until element is visible    ${Button_close_alert}
     click element    ${Button_close_alert}
-    sleep    2s
+    ${status}    run keyword and return status    wait until element is visible    ${Cart_view}
+    IF    '${status}' == '${True}'
+        click element    ${Button_close_card_2}
+    ELSE
+        log to console   --------------------
+    END
+    sleep    4s
 
 Kiểm tra icon cộng trừ
     [Arguments]    ${Button_change_qty_2}    ${Number}
