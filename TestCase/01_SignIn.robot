@@ -136,4 +136,5 @@ ${TimeOut}    30s
     [Documentation]    Đăng nhập với thông tin hợp lệ
     Login Web Haui Food  thaontt@gmail.com  Thao2702@
     wait until element is visible    ${Message_SignIn_Success}    3s
+    close browser
     sleep    5s

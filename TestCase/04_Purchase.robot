@@ -118,3 +118,4 @@ Mua hàng không thành công khi không nhập địa chỉ
     scroll element into view    ${Button_Pay_Disable}
     click element    ${Logo}
     sleep    2s
+    close browser

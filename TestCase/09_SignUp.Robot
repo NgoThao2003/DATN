@@ -70,5 +70,6 @@ ${TimeOut}    30s
     SignUp Web Haui Food  Thaontt_${SignUp_Random}    thaontt.${SignUp_Random}@gmail.com    thao2702@
     wait until element is visible    ${Message_SignUp_Success}    ${TimeOut}
     sleep    5s
+    close browser
 
 

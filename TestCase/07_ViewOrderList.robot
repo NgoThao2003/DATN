@@ -25,3 +25,4 @@ Xem danh sách sản phẩm đã mua thành công khi người dùng đã mua h�
     ELSE
         skip    User chưa có đơn nào mua hàng thành công
     END
+    close browser

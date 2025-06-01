@@ -111,3 +111,4 @@ Kiểm tra nhập số điện thoại > 10 số
     Input Account Information    Thaontt    0977151842
     click element    ${Button_Cap_Nhat}
     wait until element is visible    ${Message_Edit_AC_Success}
+    close browser

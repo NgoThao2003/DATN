@@ -21,3 +21,4 @@ Xem thông tin tài khoản thành công
     Check input have value    ${Input_HoTen}
     Check input have value    ${Input_Email}
     sleep    3s
+    close browser

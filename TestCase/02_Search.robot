@@ -63,3 +63,4 @@ Tìm kiếm sản phẩm bằng bộ lọc theo danh mục
     click element    ${CheckBox_suatuoi}
     sleep    3s
     Shoule Be Equal Name Product    ${List_Name_Product_filter}
+    close browser

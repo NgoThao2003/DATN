@@ -17,6 +17,7 @@ Logout success
     wait until element is visible    ${Button_Logout}     ${TimeOut}
     click element    ${Button_Logout}
     wait until element is visible    ${Message_Logout_Success}    ${TimeOut}
+    close browser
 
 
 

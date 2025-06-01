@@ -83,3 +83,4 @@ Xóa tất cả sản phẩm trong giỏ hàng
         sleep    3s
         log to console    Delete All Product in Cart Success
     END
+    close browser
