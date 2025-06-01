@@ -1,8 +1,0 @@
-[18720:18772:0601/140436.965:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
-[20936:20528:0601/140437.082:ERROR:ui\gl\direct_composition_support.cc:615] AMD VideoProcessorGetOutputExtension failed: Unspecified error (0x80004005)
-[20936:20528:0601/140437.091:WARNING:ui\gl\direct_composition_support.cc:1195] QueryInterface to IDCompositionDevice4 failed: No such interface supported (0x80004002)
-[18720:18772:0601/140438.905:INFO:CONSOLE:0] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://hauifood.vn/auth/login (0)
-[18720:18772:0601/140439.058:INFO:CONSOLE:1] "Manifest: Line: 1, column: 1, Syntax error.", source: https://hauifood.vn/auth/manifest.json (1)
-[18720:18772:0601/140439.978:INFO:CONSOLE:2] "Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://hauifood.vn/static/media/slick.295183786cd8a1389865.woff", source: https://hauifood.vn/static/js/main.aa9b790b.js (2)
-[5008:10848:0601/140444.395:WARNING:net\extras\sqlite\sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
-[5008:10848:0601/140444.395:WARNING:net\extras\sqlite\sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
