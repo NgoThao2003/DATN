@@ -22,8 +22,12 @@ Product Add Card
     wait until element is visible    ${Button_Add_To_Card}     ${timeout}
     click element    ${Button_Add_To_Card}
     wait until element is visible    ${Message_Add_cart_success}    ${TimeOut}
-    wait until element is visible    ${Button_close_alert}
-    click element    ${Button_close_alert}
+    ${status}    run keyword and return status    wait until element is visible    ${Button_close_alert}   5s
+    IF    '${status}' == '${True}'
+        click element     ${Button_close_alert}
+    ELSE
+        log to console    ---------------
+    END
     sleep    3s
 
 Product View Card

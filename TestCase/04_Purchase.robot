@@ -32,8 +32,10 @@ Buy Product
     wait until element is not visible    ${Icon_loading}    ${TimeOut}
     wait until element is visible    ${Final_Text_Step_Pays}    ${TimeOut}
     wait until element is visible    ${Input_sđt}
+    clear element text    ${Input_sđt}
     input text    ${Input_sđt}    0955437243
     input text    ${Input_address}    25 ngõ 249 Mai Dịch, Cầu Giấy
+    clear element text    ${Input_address}
     scroll element into view    ${Note}
     input text    ${Note}    Giao tận cửa
 

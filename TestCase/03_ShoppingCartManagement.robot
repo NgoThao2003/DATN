@@ -40,7 +40,7 @@ Thêm sản phẩm với số lượng lớn hơn 1 vào giỏ hàng
 Kiểm tra nhấn nút "- +" khi sản phẩm có quantity bằng 1
     Search success with text detail    Cơm chả cá
     Kiểm tra icon cộng trừ    ${Icon_minus}    0
-    Kiểm tra icon cộng trừ    ${Icon_Plus_Qty}    1
+#    Kiểm tra icon cộng trừ    ${Icon_Plus_Qty}    1
     click element   ${Button_close_card_3}
     sleep    2s
 

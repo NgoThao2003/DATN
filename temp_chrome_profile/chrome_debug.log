@@ -1,0 +1,7 @@
+[16380:20880:0601/154047.147:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[7752:20036:0601/154047.302:ERROR:ui\gl\direct_composition_support.cc:615] AMD VideoProcessorGetOutputExtension failed: Unspecified error (0x80004005)
+[7752:20036:0601/154047.307:WARNING:ui\gl\direct_composition_support.cc:1195] QueryInterface to IDCompositionDevice4 failed: No such interface supported (0x80004002)
+[16380:20880:0601/154048.902:INFO:CONSOLE:1] "Manifest: Line: 1, column: 1, Syntax error.", source: https://hauifood.vn/auth/manifest.json (1)
+[16380:20880:0601/154049.010:INFO:CONSOLE:0] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://hauifood.vn/auth/login (0)
+[21016:19212:0601/154051.535:WARNING:net\extras\sqlite\sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
+[21016:19212:0601/154051.536:WARNING:net\extras\sqlite\sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
