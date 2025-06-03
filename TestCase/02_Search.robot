@@ -18,7 +18,7 @@ ${CheckBox_suatuoi}    (//div[@class='ProductPage_filter-item__-KdCI']//input[@t
 Tìm kiếm sản phẩm thành công nhập đúng tên sản phẩm
     Search success with text detail    Cơm heo quay
 
-Product search successful enter approximate product name   #Nhập gần đúng
+Tìm kiếm sản phẩm thành công nhập gần đúng tên sản phẩm
     Search success
 
 Tìm kiếm sản phẩm không thành công khi sản phẩm không tồn tại

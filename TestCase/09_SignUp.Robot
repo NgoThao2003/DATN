@@ -71,5 +71,3 @@ ${TimeOut}    30s
     wait until element is visible    ${Message_SignUp_Success}    ${TimeOut}
     sleep    5s
     close browser
-
-
